@@ -1,0 +1,134 @@
+/*
+
+Offline First!
+
+yellow: #F9E682;
+turquoise: #106079;
+beige: #FCFBF5;
+
+ */
+
+body{
+  background-color: #FCFBF5;
+  color: #106079;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+header:after{
+  content: "";
+  width: 148px;
+  height: 84px;
+  background: url('../images/title.svg') no-repeat;
+  display: block;
+  position: absolute;
+  bottom: -44px;
+  left: 16px;
+}
+
+header img{
+  display: block;
+  max-width: 95%;
+  margin: 0 auto;
+  border: 3px solid #106079;
+}
+
+.content{
+  width: 100%;
+  max-width: 475px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content .lead{
+  position: absolute;
+  height: calc(100% - 96px);
+  width: 38px;
+  border-left: 3px solid #106079;
+  border-bottom: 3px solid #106079;
+  bottom: 89px;
+  left: 25px;
+}
+
+p, ul, #mc_embed_signup{
+  margin-left: 70px;
+  margin-right: 10px;
+}
+
+#mc_embed_signup{
+  margin-bottom: 100px;
+}
+
+#mce-EMAIL{
+  width: 80%;
+  height: 2em;
+  padding: 0 .5em;
+  margin: 1em 0;
+  border: 3px solid #106079;
+  background-color: #F9E682;
+  color: #106079;
+}
+
+#mce-EMAIL:hover{
+  background-color: #106079;
+  color: #F9E682;
+}
+
+#mce-EMAIL:focus{
+  background-color: #106079;
+  color: #F9E682;
+  outline: none;
+}
+
+#mc-embedded-subscribe{
+  width: auto;
+  line-height: 2em;
+  padding: 0 .5em;
+  margin: 0;
+  text-align: left;
+  border: 3px solid #106079;
+  background-color: #F9E682;
+  color: #106079;
+}
+
+#mc-embedded-subscribe:hover{
+  background-color: #106079;
+  color: #F9E682;
+}
+
+#mc-embedded-subscribe:focus{
+  background-color: #106079;
+  color: #F9E682;
+  outline: none;
+}
+
+#mce-EMAIL, #mc-embedded-subscribe{
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
+li:before{
+  content:"";
+  width: 10px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  background: #106079;
+  margin: 7px 0 0 -20px;
+}
