@@ -17,6 +17,24 @@ body{
   margin: 0 auto;
 }
 
+a.block{
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  line-height: 2em;
+  padding: 0 .5em;
+  margin: 0;
+  text-align: left;
+  border: 3px solid #106079;
+  background-color: #F9E682;
+  color: #106079;
+}
+
+a.block:hover{
+  background-color: #106079;
+  color: #F9E682;
+}
+
 header {
   margin-top: 20px;
   position: relative;
