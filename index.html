@@ -75,7 +75,13 @@ If you're offline and you know it clap your hands!
     </div>
     <!--End mc_embed_signup-->
   </div>
+
+  <script src="scripts/appcache-nanny.js"></script>
   <script type="text/javascript">
+  appCacheNanny.start();
+  appCacheNanny.on('updateready', function () {
+    location.reload(1);
+  })
   var _gauges = _gauges || [];
   (function() {
     var t   = document.createElement('script');
@@ -87,6 +93,6 @@ If you're offline and you know it clap your hands!
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();
-</script>
+  </script>
 </body>
 </html>
