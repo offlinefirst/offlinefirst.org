@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# v1 <- change me whenever a file changed
+
+CACHE:
+/
+/css/normalize.css
+/css/styles.css
+/scripts/appcache-nanny.js
+/images/map.jpg
+/images/title.svg
+
+NETWORK:
+http://secure.gaug.es/
+https://secure.gaug.es/
