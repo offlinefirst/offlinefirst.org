@@ -76,8 +76,17 @@ header img{
   left: 25px;
 }
 
+.no-lead {
+  padding-top: 20px;
+}
+
 p, ul, #mc_embed_signup{
   margin-left: 70px;
+  margin-right: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-left: 50px;
   margin-right: 10px;
 }
 
@@ -139,6 +148,7 @@ ul{
 
 li{
   list-style: none;
+  margin-bottom: 8px;
 }
 
 li:before{
@@ -150,3 +160,4 @@ li:before{
   background: #106079;
   margin: 7px 0 0 -20px;
 }
+
