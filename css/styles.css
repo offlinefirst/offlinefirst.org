@@ -17,6 +17,17 @@ body{
   margin: 0 auto;
 }
 
+a{
+  color: #106079;
+  text-decoration: none;
+  border-bottom: 3px solid #F9E682;
+}
+
+a:active, a:hover {
+  outline: 0;
+  border-bottom: 3px solid #106079;
+}
+
 a.block{
   display: inline-block;
   text-decoration: none;
@@ -91,7 +102,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #mc_embed_signup{
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #mce-EMAIL{
@@ -159,5 +170,9 @@ li:before{
   position: absolute;
   background: #106079;
   margin: 7px 0 0 -20px;
+}
+
+.readerArchive{
+  margin-bottom: 100px;
 }
 
