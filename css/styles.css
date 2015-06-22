@@ -102,8 +102,9 @@ p, ul, #mc_embed_signup{
 }
 
 h1, h2, h3, h4, h5, h6{
-  margin-left: 3.125em;
+  margin-left:  10%;
   margin-right: .625em;
+    line-height: 1em;
 }
 
 #mc_embed_signup{
