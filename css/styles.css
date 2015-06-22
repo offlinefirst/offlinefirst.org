@@ -13,7 +13,7 @@ body{
   color: #106079;
   line-height: 1.25em;
   letter-spacing: 1px;
-  max-width: 500px;
+  max-width: 31.25em;
   margin: 0 auto;
 }
 
@@ -47,20 +47,20 @@ a.block:hover{
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 1.4em;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 3.1em;
 }
 
 header:after{
   content: "";
-  width: 148px;
-  height: 84px;
+  width: 12em;
+  height: 5.2em;
   background: url('../images/title.svg') no-repeat;
   display: block;
   position: absolute;
-  bottom: -44px;
-  left: 16px;
+  bottom: -2.75em;
+  left: 1em;
 }
 
 header img{
@@ -72,37 +72,38 @@ header img{
 
 .content{
   width: 100%;
-  max-width: 475px;
+  max-width: 29.6em;
   margin: 0 auto;
   position: relative;
 }
 
 .content .lead{
   position: absolute;
-  height: calc(100% - 96px);
-  width: 38px;
+  height: 100%;
+  height: calc(100% - 6em);
+  width: 2.37em;
   border-left: 3px solid #106079;
   border-bottom: 3px solid #106079;
-  bottom: 89px;
-  left: 25px;
+  bottom: 5.56em;
+  left: 1.56em;
 }
 
 .no-lead {
-  padding-top: 20px;
+  padding-top: 1.25em;
 }
 
 p, ul, #mc_embed_signup{
-  margin-left: 70px;
-  margin-right: 10px;
+  margin-left: 4.37em;
+  margin-right: .625em;
 }
 
 h1, h2, h3, h4, h5, h6{
-  margin-left: 50px;
-  margin-right: 10px;
+  margin-left: 3.125em;
+  margin-right: .625em;
 }
 
 #mc_embed_signup{
-  margin-bottom: 50px;
+  margin-bottom: 3.125em;
 }
 
 #mce-EMAIL{
@@ -164,15 +165,15 @@ li{
 
 li:before{
   content:"";
-  width: 10px;
+  width: .625em;
   height: 3px;
   display: block;
   position: absolute;
   background: #106079;
-  margin: 7px 0 0 -20px;
+  margin: .5em 0 0 -1.25em;
 }
 
 .readerArchive{
-  margin-bottom: 100px;
+  margin-bottom: 6.25em;
 }
 
