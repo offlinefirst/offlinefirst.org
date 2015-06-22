@@ -52,7 +52,7 @@ header {
   margin-bottom: 3.1em;
 }
 
-header:after{
+header a:after{
   content: "";
   width: 12em;
   height: 5.2em;
@@ -61,6 +61,7 @@ header:after{
   position: absolute;
   bottom: -2.75em;
   left: 1em;
+    z-index: 1;
 }
 
 header img{
