@@ -52,6 +52,19 @@ header {
   margin-bottom: 3.1em;
 }
 
+header a {
+  position: relative;
+    display: block;
+    width:  97%;
+    padding-top: 49.2%;
+    margin: 0 auto;
+    border: 0;
+    text-align: center;
+}
+header a:active, header a:hover {
+    border-bottom: 0;
+}
+
 header a:after{
   content: "";
   width: 12em;
@@ -60,15 +73,21 @@ header a:after{
   display: block;
   position: absolute;
   bottom: -2.75em;
-  left: 1em;
+  left: .5em;
     z-index: 1;
 }
 
 header img{
+    position: absolute;
+    top: 0;
+    left: 0;
   display: block;
-  max-width: 95%;
-  margin: 0 auto;
+    width: 98%;
+    max-height: 15em;
   border: 3px solid #106079;
+    border-left-width: 1%;
+    border-right-width: 1%;
+  background: #F9E682;
 }
 
 .content{
