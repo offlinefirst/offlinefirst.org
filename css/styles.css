@@ -77,7 +77,8 @@ header img{
   position: relative;
 }
 
-.content .lead{
+.content::before {
+    content: '';
   position: absolute;
   height: 100%;
   height: calc(100% - 6em);
@@ -88,8 +89,11 @@ header img{
   left: 1.56em;
 }
 
-.no-lead {
+.content.no-lead {
   padding-top: 1.25em;
+}
+.content.no-lead::before {
+    display:    none;
 }
 
 p, ul, #mc_embed_signup{
