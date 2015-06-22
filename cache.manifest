@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# v000010
+
+CACHE:
+index.html
+coc.html
+chat.html
+chat-offlineiframe.html
+
+css/normalize.css
+css/styles.css
+
+favicon.ico
+images/apple-touch-icon.png
+images/map.jpg
+images/title.svg
+
+
+NETWORK:
+*
+http://offlinefirst.trodrigues.net/
+
+FALLBACK:
+http://offlinefirst.trodrigues.net/     chat-offlineiframe.html
