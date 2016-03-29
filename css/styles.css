@@ -95,7 +95,8 @@ html {
   text-decoration: none;
 }
 
-.content article a {
+.content article a,
+.content article .tbd {
   display: block;
   color: #293641;
   text-decoration: none;
@@ -104,6 +105,11 @@ html {
   padding: 40px 20px;
   font-weight: 300;
 }
+
+.content article .tbd{
+  color: #8E9DAA;
+}
+
 .content article a:hover div,
 .content article a:focus div {
   color: #5EC1B4;
