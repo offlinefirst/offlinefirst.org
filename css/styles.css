@@ -1,204 +1,332 @@
 /*
+  text color: #293641
+  highlight color: #5EC1B4
+*/
+html {
+  color: #293641;
+  font-family: 'FiraSans', sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  line-height: 1.618;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-Offline First!
-
-yellow: #F9E682;
-turquoise: #106079;
-beige: #FCFBF5;
-
- */
-
-body{
-  background-color: #FCFBF5;
-  color: #106079;
-  line-height: 1.25em;
-  letter-spacing: 1px;
-  max-width: 31.25em;
+.container {
+  max-width: 750px;
   margin: 0 auto;
 }
 
-a{
-  color: #106079;
-  text-decoration: none;
-  border-bottom: 3px solid #F9E682;
-}
-
-a:active, a:hover {
-  outline: 0;
-  border-bottom: 3px solid #106079;
-}
-
-a.block{
-  display: inline-block;
-  text-decoration: none;
-  width: auto;
-  line-height: 2em;
-  padding: 0 .5em;
-  margin: 0;
-  text-align: left;
-  border: 3px solid #106079;
-  background-color: #F9E682;
-  color: #106079;
-}
-
-a.block:hover{
-  background-color: #106079;
-  color: #F9E682;
-}
-
-header {
-  margin-top: 1.4em;
+.container > header {
   position: relative;
-  margin-bottom: 3.1em;
+  height: 170px;
+  margin: 100px 0 0;
 }
-
-header a {
-  position: relative;
-    display: block;
-    width:  97%;
-    padding-top: 49.2%;
-    margin: 0 auto;
-    border: 0;
-    text-align: center;
+.container > header ul {
+  float: left;
+  margin: 0 0 0 50px;
+  padding: 0;
 }
-header a:active, header a:hover {
-    border-bottom: 0;
-}
-
-header a:after{
-  content: "";
-  width: 12em;
-  height: 5.2em;
-  background: url('../images/title.svg') no-repeat;
-  display: block;
-  position: absolute;
-  bottom: -2.75em;
-  left: .5em;
-    z-index: 1;
-}
-
-header img{
-    position: absolute;
-    top: 0;
-    left: 0;
-  display: block;
-    width: 98%;
-    max-height: 15em;
-  border: 3px solid #106079;
-    border-left-width: 1%;
-    border-right-width: 1%;
-  background: #F9E682;
-}
-
-.content{
-  width: 100%;
-  max-width: 29.6em;
-  margin: 0 auto;
-  position: relative;
-}
-
-.content::before {
-    content: '';
-  position: absolute;
-  height: 100%;
-  height: calc(100% - 6em);
-  width: 2.37em;
-  border-left: 3px solid #106079;
-  border-bottom: 3px solid #106079;
-  bottom: 5.56em;
-  left: 1.56em;
-}
-
-.content.no-lead {
-  padding-top: 1.25em;
-}
-.content.no-lead::before {
-    display:    none;
-}
-
-p, ul, #mc_embed_signup{
-  margin-left: 4.37em;
-  margin-right: .625em;
-}
-
-h1, h2, h3, h4, h5, h6{
-  margin-left:  10%;
-  margin-right: .625em;
-    line-height: 1em;
-}
-
-#mc_embed_signup{
-  margin-bottom: 3.125em;
-}
-
-#mce-EMAIL{
-  width: 80%;
-  height: 2em;
-  padding: 0 .5em;
-  margin: 1em 0;
-  border: 3px solid #106079;
-  background-color: #F9E682;
-  color: #106079;
-}
-
-#mce-EMAIL:hover{
-  background-color: #106079;
-  color: #F9E682;
-}
-
-#mce-EMAIL:focus{
-  background-color: #106079;
-  color: #F9E682;
-  outline: none;
-}
-
-#mc-embedded-subscribe{
-  width: auto;
-  line-height: 2em;
-  padding: 0 .5em;
-  margin: 0;
-  text-align: left;
-  border: 3px solid #106079;
-  background-color: #F9E682;
-  color: #106079;
-}
-
-#mc-embedded-subscribe:hover{
-  background-color: #106079;
-  color: #F9E682;
-}
-
-#mc-embedded-subscribe:focus{
-  background-color: #106079;
-  color: #F9E682;
-  outline: none;
-}
-
-#mce-EMAIL, #mc-embedded-subscribe{
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-ul{
-  padding-left: 0;
-}
-
-li{
+.container > header li {
   list-style: none;
-  margin-bottom: 8px;
+  float: left;
+}
+.container > header li a {
+  float: left;
+  margin: 0 10px;
+  padding: 0 20px;
+  height: 168px;
+  line-height: 156px;
+  border-bottom: 2px solid #FFF;
+
+  color: #5EC1B4;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.container > header li a:hover,
+.container > header li a:focus {
+  border-bottom-color: #5EC1B4;
+}
+.container > header li.active a {
+  color: #293641;
+  border-bottom-color: #293641;
+}
+.container > header h1 {
+  float: left;
+  width: 170px;
+  height: 170px;
+  margin: 0;
+
+  background: #293641;
 }
 
-li:before{
-  content:"";
-  width: .625em;
-  height: 3px;
+.container > header h1 a {
   display: block;
-  position: absolute;
-  background: #106079;
-  margin: .5em 0 0 -1.25em;
+  height: 170px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1em;
+  text-decoration: none;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.readerArchive{
-  margin-bottom: 6.25em;
+.container > header h1 a:hover{
+  color:#fff;
+  background-color: #5EC1B4;
 }
 
+/* content */
+
+.content {
+  padding: 40px 0;
+  font-size: 24px;
+}
+
+.content a {
+  color: #5EC1B4;
+  font-weight: 400;
+}
+
+.content a:focus,
+.content a:hover {
+  text-decoration: none;
+}
+
+.content article a {
+  display: block;
+  color: #293641;
+  text-decoration: none;
+  border-bottom: 1px solid #B0CEC9;
+  overflow: hidden;
+  padding: 40px 20px;
+  font-weight: 300;
+}
+.content article a:hover div,
+.content article a:focus div {
+  color: #5EC1B4;
+}
+.content  article header {
+  float: left;
+  width: 170px;
+}
+.content  article h6 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 500;
+}
+.content  article header .year {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.618;
+}
+.content  article header + div {
+  margin-left: 200px;
+}
+.content  article h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+}
+.content  article p {
+  margin: 0;
+}
+
+/* home */
+.home .content {
+  margin-left: 30.667%;
+}
+
+/* events */
+
+/* news */
+.newsletter {
+  padding: 0 20px;
+  border-bottom: 1px solid #B0CEC9;
+
+  background: #E5F7F4;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.newsletter p:first-child {
+  float: left;
+  line-height: 30px;
+  position: relative;
+  top: 2px;
+}
+.newsletter p:first-child + p {
+  float: right;
+}
+
+.newsletter label {
+  font-weight: 500;
+}
+.newsletter input {
+  font: inherit;
+  width: 240px;
+  margin: 0 10px;
+}
+
+.newsletter button {
+  border: none;
+  background: #5EC1B4;
+}
+
+/* camp */
+.camp .content {
+  padding-top: 100px;
+}
+.camp .content header {
+  float: left;
+  text-align: center;
+  width: 22.667%;
+}
+.camp .content header h6 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 500;
+}
+.camp .content header .day{
+  display: block;
+}
+.camp .content header .day sup{
+
+}
+.camp .content header .year {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.618;
+}
+.camp .content header hr {
+  border: 0;
+  border-top: 2px solid #5EC1B4;
+  width: 70px;
+  margin: 0 auto;
+}
+.camp .attend a {
+  display: block;
+  text-align: center;
+  background: #5EC1B4;
+  color: #fff;
+  font-weight: 500;
+  line-height: 60px;
+  text-decoration: none;
+}
+.camp .attend a:focus,
+.camp .attend a:hover {
+  text-decoration: none;
+  background: #293641;
+}
+
+.camp .content header + div {
+  margin-left: 30.667%;
+}
+
+.camp .content h1 {
+  margin: 0;
+}
+
+.camp .content h2 {
+  line-height: 48px;
+  font-weight: 100;
+}
+
+.camp .content h3 {
+  margin-top: 42px;
+  margin-bottom: 0px;
+}
+
+.camp .content div.main p {
+  margin-top: 12px;
+}
+
+.camp img.img--right{
+  text-align: right;
+  width: 100%;
+}
+
+
+/* Media Queries  */
+
+@media(max-width: 760px) {
+
+  .container > header{
+    margin-top: 0;
+  }
+
+  .container > header h1 {
+    float: none;
+    margin: auto;
+  }
+
+  .container > header ul {
+    clear: left;
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .container > header li {
+    width: 33.333%;
+  }
+
+  .container > header li a {
+    height: 74px;
+    line-height: 74px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home .content {
+    clear:left;
+    margin-left: 0;
+    padding: 0px 20px 20px 20px;
+  }
+
+  /*Camp*/
+  .camp .content header {
+    background: #E5F7F4;
+    float: none;
+    margin-top: 6px;
+    width: 100%;
+    padding-bottom: 6px;
+    padding-top: 24px;
+  }
+
+  .camp .content header h6, .camp .content header p.location, .camp .content header p.price {
+    margin: 0;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    width: 30%;
+    vertical-align: middle;
+  }
+
+  .camp .content header h6 {}
+
+  .camp .content header p.attend{
+    margin: 24px auto 24px auto;
+    width: 80%;
+  }
+
+  .camp .content header hr {
+    display: none;
+  }
+
+  .camp .content header + div {
+    clear:left;
+    margin-left: 0;
+    margin-top: 30px;
+    padding: 0px 20px 20px 20px;
+  }
+}

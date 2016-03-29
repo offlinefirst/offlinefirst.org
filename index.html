@@ -4,7 +4,7 @@
 If you're offline and you know it clap your hands!
 
 -->
-<html manifest="cache.manifest">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=yes">
@@ -21,88 +21,94 @@ If you're offline and you know it clap your hands!
   <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
   <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
   <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', './css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
 </head>
-<body>
-  <header>
-    <a href="/">
-      <img src="images/map.jpg" alt="Offline first homepage">
-    </a>
-  </header>
+<body class="home">
+  <div class="container">
+    <header>
+      <h1>
+        <a href="./" title="Go to homepage">Offline First</a>
+      </h1>
 
+      <nav>
+        <ul>
+          <li><a href="./events/">Events</a></li>
+          <li><a href="./news/">News</a></li>
+          <li><a href="./camp/">Camp</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="content">
-    <p>
-      <strong>We live in a disconnected &amp; battery powered world, but our technology and best practices are a leftover from the always connected &amp; steadily powered past.</strong>
-    </p>
+    <div class="content">
+      <p>
+        <strong>We live in a disconnected &amp; battery powered world, but our technology and best practices are a leftover from the always connected &amp; steadily powered past.</strong>
+      </p>
 
-    <p>
-      This website is starting a discussion about mobile first app development that goes beyond shrinking content to phone and tablet screen sizes.
-    </p>
+      <p>
+        Offline capability is a key characteristic of modern Progressive Web Applications. Offline first thinking must learn from and further what we’ve seen work with Responsive and Mobile First thinking.
+      </p>
 
-    <p><a class="block" href="http://blog.hood.ie/2013/11/say-hello-to-offline-first/" title="Introduction to offline first at the hood.ie blog">Read the introduction</a>
-    </p>
+      <p>
+        Read <a href="http://hood.ie/blog/say-hello-to-offline-first.html">the introduction</a> and the <a href="http://alistapart.com/article/offline-first">follow up on A List Apart</a>.
+        Visit or organise <a href="events.html">a local event</a>, join the <a href="chat.html">Offline First Chat</a>. We would love to
+      </p>
 
-    <p><a class="block" href="http://alistapart.com/article/offline-first" title="Designing Offline-First Web Apps">Read the follow up on <em>A List Apart</em></a>
-    </p>
+      <p>
+        <strong>We want to spark a discussion around:</strong>
+      </p>
 
-    <p><a class="block" href="https://github.com/offlinefirst/events/" title="Offline First Events">Join a local event</a>
-    </p>
-
-    <p><a class="block" href="chat" title="Offline First Slack">Join the offline first Slack</a>
-    </p>
-
-    <p>
-      <strong>We are interested in:</strong>
-    </p>
-    <ul>
-      <li>UI Conventions for Offline Apps</li>
-      <li>UX patterns</li>
-      <li>User research</li>
-      <li>Mental model discovery</li>
-      <li>Tools and techniques for building offline capable apps</li>
-      <li>Distributed systems research</li>
-      <li>Technology solutions for handling offline</li>
-      <li>Web <em>and</em> Native</li>
-    </ul>
-
-    <p>
-      We are collecting discussion results from all of the above on
-      our <a class="" href="https://github.com/offlinefirst">Offline First Github Organisation</a>.
-    </p>
-
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="http://hood.us4.list-manage.com/subscribe/post?u=12d36bbe9418ed6a43127cd62&amp;id=7fc00bfaef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-        <label for="mce-EMAIL"><strong>Sign up</strong> if you want to join the conversation:</label>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
-        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-      </form>
-    </div>
-    <!--End mc_embed_signup-->
-  </div>
-  <div class="readerArchive">
-    <h3>The Offline First Reader Archive</h3>
-    <p>
       <ul>
-        <li><a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=4fb72e0584" title="The Offline First Reader, Issue 10">Offline First Reader Issue #10, January 26th, 2016</a></li>
-        <li><a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=e87b493658" title="The Offline First Reader, Issue 9">Offline First Reader Issue #9, December 4th, 2015</a></li>
-        <li><a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=9cf20770ee" title="The Offline First Reader, Issue 8">Offline First Reader Issue #8, November 6th, 2015</a></li>
-        <li><a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=fdfbe1826c" title="The Offline First Reader, Issue 7">Offline First Reader Issue #7, October 9th 2015</a></li>
+        <li>UI Conventions for Offline Apps</li>
+        <li>UX patterns</li>
+        <li>User research</li>
+        <li>Mental model discovery</li>
+        <li>Tools and techniques for building offline capable apps</li>
+        <li>Distributed systems research</li>
+        <li>Technology solutions for handling offline</li>
+        <li>Web <em>and</em> Native</li>
       </ul>
-    </p>
+
+      <p>
+        We are collecting discussion results from all of the above on
+        our <a class="" href="https://github.com/offlinefirst">Offline First Github Organisation</a>.
+      </p>
+    </div>
   </div>
-  <script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
 </body>
 </html>

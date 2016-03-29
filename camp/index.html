@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+
+If you're offline and you know it clap your hands!
+
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>Offline First Events</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', './css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="camp">
+  <div class="container">
+    <header>
+      <h1>
+        <a href="../" title="Go to homepage">Offline First</a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="../events/">Events</a></li>
+          <li><a href="../news/">News</a></li>
+          <li class="active"><a href="./">Camp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <header>
+        <h6>
+          <span class="month">June</span>
+          <span class="day">10–12<sup>th</sup></span>
+          <span class="year">2016</span>
+        </h6>
+
+        <p class="location">
+          Jewitt, NY<br>
+          30 Campers
+        </p>
+
+        <hr>
+
+        <p class="price">
+          $200
+        </p>
+
+        <p class="attend">
+          <!-- Typeform link -->
+          <a class="typeform-share link" href="http://teamofflinecamp.typeform.com" data-mode="2" target="_blank">Attend</a>
+          <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+          <!-- /Typeform link -->
+        </p>
+      </header>
+
+      <div class="main">
+        <h1>Offline Camp</h1>
+
+        <h2>
+          We’re taking the Offline First community for a three day
+          retreat in the Catskill Mountains.
+        </h2>
+
+        <p>
+          We’re developers interested in making our apps work without constant
+          internet connection. We’re designers exploring UX patterns that maintain
+          user understanding of system state. We are all working on problems that very
+          few have worked on before us, and we know it will take a wide range
+          of points of view to solve the big challenges ahead of us.
+        </p>
+
+        <p>Join us for an exciting three days away from it all with the Offline First community!</p>
+
+        <img src="../images/catskills-lake.jpg" alt="" class="img--right">
+
+        <h3>All within one (very) big house</h3>
+        <p>
+          Located in the Catskill Mountains, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.
+        </p>
+
+        <img src="../images/catskills-house.jpg" alt="" class="img--right">
+        <img src="../images/catskills-bedroom.jpg" alt="" class="img--right">
+
+        <h3>Meals are provided</h3>
+        <p>
+          Catering will be provided for omnivore, vegan, and gluten free diets. If you have any food allergies or dietary restrictions, please <a href="mailTo:camp@offlinefirst.org">contact us</a>!
+        </p>
+
+        <img src="../images/catskills-bar.jpg" alt="" class="img--right">
+
+        <h3>Code of Conduct</h3>
+        <p>
+          All attendees, speakers, sponsors and volunteers at our camp are required to agree with the Offline Camp <a href="../code-of-conduct/">code of conduct</a>. If you have any questions or suggestions on how we can make Offline Camp more safe and inclusive for campers, please <a href="mailTo:camp@offlinefirst.org">let us know</a>.
+        </p>
+
+
+
+        <h3>Thanks to our Sponsors</h3>
+        <ul>
+          <li>IBM Cloud Data Services</li>
+        </ul>
+        <h3>Thanks to our Event Partners</h3>
+        <ul>
+          <li>Hoodie</li>
+          <li>Make&amp;Model</li>
+          <li>Bocoup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

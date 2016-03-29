@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+
+If you're offline and you know it clap your hands!
+
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>Offline First Events</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', './css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="events">
+  <div class="container">
+    <header>
+      <h1>
+        <a href="../" title="Go to homepage">Offline First</a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li class="active"><a href="../events/">Events</a></li>
+          <li><a href="../news/">News</a></li>
+          <li><a href="../camp/">Camp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <article class="event">
+        <a href="http://www.meetup.com/new-england-engineers/events/229149674/">
+          <header>
+            <h6>
+              <span class="month">Mar</span>
+              <span class="day">31</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Offline First Night</h2>
+            <p>New England Software Engineers, Boston</p>
+          </div>
+        </a>
+      </article>
+      <article class="event">
+        <a href="#" onclick="alert('to be done');">
+          <header>
+            <h6>
+              <span class="month">April</span>
+              <span class="day">?</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Offline First UX</h2>
+            <p>UX Happy Hour, Boston</p>
+          </div>
+        </a>
+      </article>
+      <article class="event">
+        <a href="#" onclick="alert('to be done');">
+          <header>
+            <h6>
+              <span class="month">May</span>
+              <span class="day">?</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Offline First Workshop</h2>
+            <p><em>tbd</em>, Boston</p>
+          </div>
+        </a>
+      </article>
+      <article class="event">
+        <a href="../camp/">
+          <header>
+            <h6>
+              <span class="month">June</span>
+              <span class="day">16-19</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Offline Camp</h2>
+            <p>Shelbourne, MA</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+
+If you're offline and you know it clap your hands!
+
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>Offline First Events</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', './css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="new">
+  <div class="container">
+    <header>
+      <h1>
+        <a href="../" title="Go to homepage">Offline First</a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="../events/">Events</a></li>
+          <li class="active"><a href="../news/">News</a></li>
+          <li><a href="../camp/">Camp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="newsletter" id="mc_embed_signup">
+        <form action="http://hood.us4.list-manage.com/subscribe/post?u=12d36bbe9418ed6a43127cd62&amp;id=7fc00bfaef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+          <p>
+            Get Offline First Reader in your Inbox!
+          </p>
+
+          <p>
+            <label for="input-email">
+              E-mail
+            </label>
+            <input type="email" name="EMAIL" id="input-email" required="">
+            <button type="submit" title="submit">
+              &rarr;
+            </button>
+          </p>
+        </form>
+      </div><!-- /.newsletter -->
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=e8eb8f7051">
+          <header>
+            <h6>
+              <span class="month">Feb</span>
+              <span class="day">23</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 11</h2>
+            <p>Web Powered SMS Inbox with Service Worker &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=e87b493658">
+          <header>
+            <h6>
+              <span class="month">Jan</span>
+              <span class="day">26</span>
+              <span class="year">2016</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 10</h2>
+            <p>Introducing Soundslice offline mode &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=e87b493658">
+          <header>
+            <h6>
+              <span class="month">Dec</span>
+              <span class="day">4</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 9</h2>
+            <p>Alex from the Hoodie team with an overview of how minutes.io &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=9cf20770ee">
+          <header>
+            <h6>
+              <span class="month">Nov</span>
+              <span class="day">6</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 8</h2>
+            <p>Don’t Wait for ServiceWorker: Adding Offline Support with One-Line &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=fdfbe1826c">
+          <header>
+            <h6>
+              <span class="month">Oct</span>
+              <span class="day">9</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 7</h2>
+            <p>The Web Platform Podcast did its 60th episode on “Offline First” &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=dce53d154e">
+          <header>
+            <h6>
+              <span class="month">Sep</span>
+              <span class="day">4</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 6</h2>
+            <p>A Deep Dive into Offline First with PouchDB and IBM Cloudant &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=6a33eaac31">
+          <header>
+            <h6>
+              <span class="month">Jul</span>
+              <span class="day">10</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 5</h2>
+            <p>Taking Ember Offline &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=269bbcbd4a">
+          <header>
+            <h6>
+              <span class="month">Jun</span>
+              <span class="day">12</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 4</h2>
+            <p>An offline conference site, Google's offline SDK, offline Music-Sharing in Africa &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive1.com/?u=12d36bbe9418ed6a43127cd62&id=269bbcbd4a">
+          <header>
+            <h6>
+              <span class="month">May</span>
+              <span class="day">15</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 3</h2>
+            <p>ThoughWorks Radar, Dropbox Sync API, the UX of Offline First &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=bc1133ac8c">
+          <header>
+            <h6>
+              <span class="month">Apr</span>
+              <span class="day">17</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 2</h2>
+            <p>Ola Gasidlo gave an "Offline First" talk at Conc.at &hellip;</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="event">
+        <a href="http://us4.campaign-archive2.com/?u=12d36bbe9418ed6a43127cd62&id=bc1133ac8c">
+          <header>
+            <h6>
+              <span class="month">Mar</span>
+              <span class="day">20</span>
+              <span class="year">2015</span>
+            </h6>
+          </header>
+          <div>
+            <h2>Issue 1</h2>
+            <p>Offline is not just another mobile feature &hellip;</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
