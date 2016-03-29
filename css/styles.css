@@ -299,6 +299,35 @@ html {
     padding: 0px 20px 20px 20px;
   }
 
+  /*News*/
+
+  .newsletter input{
+    margin: 0;
+    width: calc(100% - 100px);
+  }
+
+  .newsletter p:first-child,
+  .newsletter p:first-child + p {
+    float: none;
+  }
+
+  .content article.event header{
+    float: none;
+    width: 100%;
+  }
+
+  .content article.event header h6{
+    font-size: 24px;
+  }
+
+  .content article.event header .year{
+    display: inline;
+  }
+
+  .content article.event header + div{
+    margin-left: 0;
+  }
+
   /*Camp*/
   .camp .content header {
     background: #E5F7F4;
