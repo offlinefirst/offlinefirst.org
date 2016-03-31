@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# v000011
+
+CACHE:
+/
+/camp/
+/chat/
+/code-of-conduct/
+/events/
+/news/
+/css/normalize.css
+/css/styles.css
+/images/catskills-lake.jpg
+/images/catskills-house.jpg
+/images/catskills-bedroom.jpg
+/images/catskills-bar.jpg
+
+NETWORK:
+/favicon.ico
+/css/fonts.css
+http://offlinefirst.trodrigues.net/
+http://secure.gaug.es/
+https://s3-eu-west-1.amazonaws.com/
