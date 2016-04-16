@@ -259,6 +259,30 @@ html {
   width: 100%;
 }
 
+.camp section.sponsorship{
+  background: #F0FBFD;
+  padding: 30px;
+}
+
+.camp section.sponsorship h3{
+  margin-top: 0;
+}
+
+.camp section.sponsorship a{
+  display: block;
+  text-align: center;
+  background: #5EC1B4;
+  color: #fff;
+  font-weight: 500;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+.camp section.sponsorship a:hover{
+  background: #293641;
+  text-decoration: none;
+}
+
 
 /* Media Queries  */
 
