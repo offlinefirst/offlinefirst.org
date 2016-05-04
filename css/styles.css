@@ -268,6 +268,19 @@ html {
   margin-top: 0;
 }
 
+.camp section.sponsorship ul{
+  padding: 0 0 30px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px dotted rgba(0,0,0,.15);
+}
+
+.camp section.sponsorship li.ibm{
+  background: url(../images/ibmpos_black.svg) no-repeat 0 0 rgba(0, 0, 0, 0);
+  text-indent: -9999px;
+  padding: 12px;
+  margin: 18px 12px 12px 12px;
+}
+
 .camp section.sponsorship a{
   display: block;
   text-align: center;
