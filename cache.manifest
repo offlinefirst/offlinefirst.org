@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v000022
+# v000026
 
 CACHE:
 /
@@ -10,11 +10,26 @@ CACHE:
 /news/
 /css/normalize.css
 /css/styles.css
-/images/catskills-lake.jpg
-/images/catskills-house.jpg
-/images/catskills-bedroom.jpg
+/css/fonts.css
+/images/bocoup.png
+/images/camp-background.png
 /images/catskills-bar.jpg
+/images/catskills-bathroom.jpg
+/images/catskills-bedroom.jpg
+/images/catskills-house.jpg
+/images/catskills-lake.jpg
+/images/hoodie_logo.svg
 /images/ibmpos_black.svg
+/images/icon_source.png
+/images/MM_logo.svg
+/images/offline-first-logo.png
+/images/YLD_logo_black.svg
+/images/team/bradley.jpg
+/images/team/corvo.png
+/images/team/gregor.png
+/images/team/maureen.jpg
+/images/team/steve.jpg
+/images/team/teri.jpg
 
 NETWORK:
 /favicon.ico

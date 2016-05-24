@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+
+If you're offline and you know it clap your hands!
+
+-->
+<html lang="en" manifest="/cache.manifest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>Offline First Camp</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '../css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="camp">
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="../" class="back" title="Go to homepage">Offline First</a>
+        <h1>
+          <a href="/" title="Go to Offline Camp">Offline Camp</a>
+        </h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">The Event</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li class="active"><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="codeofconduct.html">Code of Conduct</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <header>
+        <h6>
+          <span class="month">June</span>
+          <span class="day">24-26<sup>th</sup></span>
+          <span class="year">2016</span>
+        </h6>
+
+        <p class="location">
+          <a href="https://www.google.com/maps/place/Jewett,+NY+12444/@42.2556971,-74.3058334,3382m/data=!3m1!1e3!4m2!3m1!1s0x89dc4ddb003da3bb:0x4d57a12847c9d681">Jewett, NY<br>
+          30 Campers</a>
+        </p>
+
+        <hr>
+
+        <p class="price">
+          $280
+        </p>
+
+        <p class="attend">
+          <a href="https://ti.to/offlinefirst/offline-camp">Get ticket</a>
+        </p>
+      </header>
+      <div class="main">
+        <h2>
+          Sponsorships
+        </h2>
+          <ul class="sponsorships">
+            <li>
+              <a href="mailto:camp@offlinefirst.org?subject=Diversity%20sponsorship" class="make-it-rain">
+                <span class="name">Non-Exclusive Diversity Sponsor</span>
+                <span class="price">$2500</span>
+                <p class="description">Diversity sponsorships will help us cover costs for community members whose diverse perspectives and experiences will be a significant gain to the Offline First Community.</p>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="credits">
+        <div class="sponsors">
+          <div class="sponsor ibm">
+            <a href="https://developer.ibm.com/clouddataservices/"><img src="../images/ibmpos_black.svg" alt="" class="ibm"></a>
+            <p>A huge thank you to our foundational sponsor and partner, <a href="https://developer.ibm.com/clouddataservices/"><strong>IBM Cloud Data Services</strong></a>. Without them, this wouldn't be possible.</p>
+          </div>
+          <div class="sponsor yld">
+            <a href="https://www.yld.io/"><img src="../images/YLD_logo_black.svg" alt="" class="yld"></a>
+            <p>Diversity sponsor, <a href="https://www.yld.io/"><strong>YLD</strong></a>, is a team of motivated and experienced individuals passionate for software engineering and dream of making digital transformation possible for everyone.</p>
+          </div>
+
+          <p class="plug">Pulling the community together for a more focused conversation around offline will be tremendous for advancing offline tooling, design patterns, and making the challenge more visible. We would love to have your help.</p>
+        </div>
+        <div class="apply">
+          <span class="date">June 24–26</span>
+          <span class="price">$280</span>
+          <a href="https://ti.to/offlinefirst/offline-camp">Get Ticket</a>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </div>
+  </div>
+  <canvas id="confetti" class="release-confetti"></canvas>
+  <script>
+  var sponsorship = document.getElementsByClassName("make-it-rain");
+
+  sponsorship[0].onmouseover = function(e){
+    console.log(e);
+    document.getElementById("confetti").style.display = "block";
+  }
+  sponsorship[0].onmouseout = function(e){
+    console.log(e);
+    document.getElementById("confetti").style.display = "none";
+  }
+
+  </script>
+
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+  <script>
+    (function() {
+  var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
+
+  NUM_CONFETTI = 150;
+
+  COLORS = [[101, 209, 195], [101, 209, 195], [101, 209, 195], [101, 209, 195], [101, 209, 195]];
+
+  PI_2 = 2 * Math.PI;
+
+  canvas = document.getElementById("confetti");
+
+  context = canvas.getContext("2d");
+
+  window.w = 0;
+
+  window.h = 0;
+
+  resizeWindow = function() {
+    window.w = canvas.width = window.innerWidth;
+    return window.h = canvas.height = window.innerHeight;
+  };
+
+  window.addEventListener('resize', resizeWindow, false);
+
+  window.onload = function() {
+    return setTimeout(resizeWindow, 0);
+  };
+
+  range = function(a, b) {
+    return (b - a) * Math.random() + a;
+  };
+
+  drawCircle = function(x, y, r, style) {
+    context.beginPath();
+    context.arc(x, y, r, 0, PI_2, false);
+    context.fillStyle = style;
+    return context.fill();
+  };
+
+  xpos = .5;
+
+  window.requestAnimationFrame = (function() {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+      return window.setTimeout(callback, 1000 / 60);
+    };
+  })();
+
+  Confetti = (function() {
+    function Confetti() {
+      this.style = COLORS[~~range(0, 5)];
+      this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
+      this.r = ~~range(1, 5);
+      this.r2 = 2 * this.r;
+      this.replace();
+    }
+
+    Confetti.prototype.replace = function() {
+      this.opacity = 0;
+      this.dop = 0.03 * range(1, 4);
+      this.x = range(-this.r2, w - this.r2);
+      this.y = range(-20, h - this.r2);
+      this.xmax = w - this.r;
+      this.ymax = h - this.r;
+      this.vx = range(0, 2) + 8 * xpos - 5;
+      return this.vy = 0.7 * this.r + range(-1, 1);
+    };
+
+    Confetti.prototype.draw = function() {
+      var _ref;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.opacity += this.dop;
+      if (this.opacity > 1) {
+        this.opacity = 1;
+        this.dop *= -1;
+      }
+      if (this.opacity < 0 || this.y > this.ymax) {
+        this.replace();
+      }
+      if (!((0 < (_ref = this.x) && _ref < this.xmax))) {
+        this.x = (this.x + this.xmax) % this.xmax;
+      }
+      return drawCircle(~~this.x, ~~this.y, this.r, "" + this.rgb + "," + this.opacity + ")");
+    };
+
+    return Confetti;
+
+  })();
+
+  confetti = (function() {
+    var _i, _results;
+    _results = [];
+    for (i = _i = 1; 1 <= NUM_CONFETTI ? _i <= NUM_CONFETTI : _i >= NUM_CONFETTI; i = 1 <= NUM_CONFETTI ? ++_i : --_i) {
+      _results.push(new Confetti);
+    }
+    return _results;
+  })();
+
+  window.step = function() {
+    var c, _i, _len, _results;
+    requestAnimationFrame(step);
+    context.clearRect(0, 0, w, h);
+    _results = [];
+    for (_i = 0, _len = confetti.length; _i < _len; _i++) {
+      c = confetti[_i];
+      _results.push(c.draw());
+    }
+    return _results;
+  };
+
+  step();
+
+}).call(this);
+
+  </script>
+</body>
+</html>

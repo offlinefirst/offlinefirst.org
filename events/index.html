@@ -38,7 +38,7 @@ If you're offline and you know it clap your hands!
                 } else {
                     // We have to first load the font file asynchronously
                     var request = new XMLHttpRequest();
-                    request.open('GET', './css/fonts.css', true);
+                    request.open('GET', '../css/fonts.css', true);
 
                     request.onload = function() {
                         if (request.status >= 200 && request.status < 400) {
@@ -135,21 +135,6 @@ If you're offline and you know it clap your hands!
             <p>Jewett, NY</p>
           </div>
         </a>
-      </article>
-      <article class="event">
-        <span class="tbd">
-          <header>
-            <h6>
-              <span class="month">?</span>
-              <span class="day">?</span>
-              <span class="year">2016</span>
-            </h6>
-          </header>
-          <div>
-            <h2>Offline First Workshop</h2>
-            <p><em>tbd</em>, Boston</p>
-          </div>
-        </span>
       </article>
     </div>
   </div>
