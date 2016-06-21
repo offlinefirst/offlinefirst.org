@@ -1,155 +1,67 @@
-<!DOCTYPE html>
-<!--
+---
+layout:     default
+title:      Offline First Events
+root_path:  ../
+tab:        events
+---
 
-If you're offline and you know it clap your hands!
-
--->
-<html lang="en" manifest="/cache.manifest">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes">
-  <title>Offline First Events</title>
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
-
-  <script>
-        (function(){
-            function addFont() {
-                var style = document.createElement('style');
-                style.rel = 'stylesheet';
-                document.head.appendChild(style);
-                style.textContent = localStorage.firaSansWeb;
-            }
-
-            try {
-                if (localStorage.firaSansWeb) {
-                    // The font is in localStorage, we can load it directly
-                    addFont();
-                } else {
-                    // We have to first load the font file asynchronously
-                    var request = new XMLHttpRequest();
-                    request.open('GET', '../css/fonts.css', true);
-
-                    request.onload = function() {
-                        if (request.status >= 200 && request.status < 400) {
-                            // We save the file in localStorage
-                            localStorage.firaSansWeb = request.responseText;
-
-                            // ... and load the font
-                            addFont();
-                        }
-                    };
-
-                    request.send();
-                }
-            } catch(ex) {
-                // maybe load the font synchronously for woff-capable browsers
-                // to avoid blinking on every request when localStorage is not available
-            }
-        }());
-      </script>
-</head>
-<body class="events">
-  <div class="container">
+<article class="event">
+  <a href="http://www.meetup.com/new-england-engineers/events/229149674/">
     <header>
-      <h1>
-        <a href="../" title="Go to homepage">Offline First</a>
-      </h1>
-
-      <nav>
-        <ul>
-          <li class="active"><a href="../events/">Events</a></li>
-          <li><a href="../news/">News</a></li>
-          <li><a href="../camp/">Camp</a></li>
-        </ul>
-      </nav>
+      <h6>
+        <span class="month">Mar</span>
+        <span class="day">31</span>
+        <span class="year">2016</span>
+      </h6>
     </header>
-
-    <div class="content">
-      <article class="event">
-        <a href="http://www.meetup.com/new-england-engineers/events/229149674/">
-          <header>
-            <h6>
-              <span class="month">Mar</span>
-              <span class="day">31</span>
-              <span class="year">2016</span>
-            </h6>
-          </header>
-          <div>
-            <h2>Offline First Night</h2>
-            <p>New England Software Engineers, Boston</p>
-          </div>
-        </a>
-      </article>
-      <article class="event">
-        <a href="http://www.meetup.com/UX-East/events/230647308/">
-          <header>
-            <h6>
-              <span class="month">May</span>
-              <span class="day">11</span>
-              <span class="year">2016</span>
-            </h6>
-          </header>
-          <div>
-            <h2>Designing Offline First Applications</h2>
-            <p>UX East, Boston</p>
-          </div>
-        </a>
-      </article>
-      <article class="event">
-        <a href="http://hospitalrun.io/lisbon/">
-          <header>
-            <h6>
-              <span class="month">June</span>
-              <span class="day">18</span>
-              <span class="year">2016</span>
-            </h6>
-          </header>
-          <div>
-            <h2>HospitalRun Hack Day</h2>
-            <p>Lisbon, Portugal</p>
-          </div>
-        </a>
-      </article>
-      <article class="event">
-        <a href="../camp/">
-          <header>
-            <h6>
-              <span class="month">June</span>
-              <span class="day">24-26</span>
-              <span class="year">2016</span>
-            </h6>
-          </header>
-          <div>
-            <h2>Offline Camp</h2>
-            <p>Jewett, NY</p>
-          </div>
-        </a>
-      </article>
+    <div>
+      <h2>Offline First Night</h2>
+      <p>New England Software Engineers, Boston</p>
     </div>
-  </div>
-  <script type="text/javascript">
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
-</body>
-</html>
+  </a>
+</article>
+<article class="event">
+  <a href="http://www.meetup.com/UX-East/events/230647308/">
+    <header>
+      <h6>
+        <span class="month">May</span>
+        <span class="day">11</span>
+        <span class="year">2016</span>
+      </h6>
+    </header>
+    <div>
+      <h2>Designing Offline First Applications</h2>
+      <p>UX East, Boston</p>
+    </div>
+  </a>
+</article>
+<article class="event">
+  <a href="http://hospitalrun.io/lisbon/">
+    <header>
+      <h6>
+        <span class="month">June</span>
+        <span class="day">18</span>
+        <span class="year">2016</span>
+      </h6>
+    </header>
+    <div>
+      <h2>HospitalRun Hack Day</h2>
+      <p>Lisbon, Portugal</p>
+    </div>
+  </a>
+</article>
+<article class="event">
+  <a href="../camp/">
+    <header>
+      <h6>
+        <span class="month">June</span>
+        <span class="day">24-26</span>
+        <span class="year">2016</span>
+      </h6>
+    </header>
+    <div>
+      <h2>Offline Camp</h2>
+      <p>Jewett, NY</p>
+    </div>
+  </a>
+</article>

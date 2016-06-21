@@ -1,214 +1,94 @@
-<!DOCTYPE html>
-<!--
+---
+layout:     camp
+title:      Offline Camp Code of Conduct
+---
 
-If you're offline and you know it clap your hands!
+<header>
+  <h6>
+    <span class="month">June</span>
+    <span class="day">24-27<sup>th</sup></span>
+    <span class="year">2016</span>
+  </h6>
 
--->
-<html lang="en" manifest="/cache.manifest">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes">
-  <title>Offline First Camp</title>
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+  <p class="location">
+    <a href="https://goo.gl/maps/xpfwJVuWT752">Jewett, NY<br>
+    30 Campers</a>
+  </p>
 
-  <script>
-        (function(){
-            function addFont() {
-                var style = document.createElement('style');
-                style.rel = 'stylesheet';
-                document.head.appendChild(style);
-                style.textContent = localStorage.firaSansWeb;
-            }
+  <hr>
 
-            try {
-                if (localStorage.firaSansWeb) {
-                    // The font is in localStorage, we can load it directly
-                    addFont();
-                } else {
-                    // We have to first load the font file asynchronously
-                    var request = new XMLHttpRequest();
-                    request.open('GET', '../css/fonts.css', true);
+  <p class="price">
+    <strong>$350</strong><br>
+  </p>
 
-                    request.onload = function() {
-                        if (request.status >= 200 && request.status < 400) {
-                            // We save the file in localStorage
-                            localStorage.firaSansWeb = request.responseText;
+  <p class="attend">
+    <a href="https://ti.to/offlinefirst/offline-camp">Get ticket</a>
+  </p>
+</header>
+<div class="main">
+   <h2>The Offline Camp Code of Conduct</h2>
 
-                            // ... and load the font
-                            addFont();
-                        }
-                    };
+  <p>
+    All attendees, speakers, sponsors, partners and volunteers at our camp are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
+  </p>
 
-                    request.send();
-                }
-            } catch(ex) {
-                // maybe load the font synchronously for woff-capable browsers
-                // to avoid blinking on every request when localStorage is not available
-            }
-        }());
-      </script>
-</head>
-<body class="camp">
-  <div class="container">
-    <header>
-      <div class="logo">
-        <a href="../" class="back" title="Go to homepage">Offline First</a>
-        <h1>
-          <a href="../camp/index.html" title="Go to Offline Camp">Offline Camp</a>
-        </h1>
-      </div>
+  <h3>Responsible and enforcing this Code of Conduct</h3>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">The Event</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="sponsorships.html">Sponsorships</a></li>
-          <li class="active"><a href="codeofconduct.html">Code of Conduct</a></li>
-        </ul>
-      </nav>
-    </header>
+  <p>
+    We are dedicated to providing a safe and comfortable space for all Offline Campers. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please tell an organiser immediately. You can contact
+    the camp organising team by <a href="mailto:camp@offlinefirst.org?subject=Code+of+Conduct+Help">email</a>, call Gregor directly at +1 (781) 363-4625, or talk directly to any <a href="#camp-organiser">camp organiser</a>.
+  </p>
 
-    <div class="content">
-      <header>
-        <h6>
-          <span class="month">June</span>
-          <span class="day">24-27<sup>th</sup></span>
-          <span class="year">2016</span>
-        </h6>
+  <h3>The Quick Version</h3>
 
-        <p class="location">
-          <a href="https://goo.gl/maps/xpfwJVuWT752">Jewett, NY<br>
-          30 Campers</a>
-        </p>
+  <p>
+    Our camp is dedicated to providing a harassment-free camp experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of camp participants in any form. Sexual language and imagery is not appropriate for any camp venue, including talks, workshops, parties, Twitter and other online media. Unacceptable behavior from any camper, including sponsors and organisers with decision-making authority, will not be tolerated. Anyone asked to stop unacceptable behavior is expected to comply immediately. If a camper engages in unnacceptable behavior, the organisers reserve the right to respond with any action the community deems appropriate, up to and including ejection from camp <em>without warning and without refund</em>.
+  </p>
 
-        <hr>
+  <h3>The Less Quick Version</h3>
 
-        <p class="price">
-          <strong>$350</strong><br>
-        </p>
+  <p>
+    Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
+  </p>
 
-        <p class="attend">
-          <a href="https://ti.to/offlinefirst/offline-camp">Get ticket</a>
-        </p>
-      </header>
-      <div class="main">
-         <h2>The Offline Camp Code of Conduct</h2>
+  <p>
+    Participants asked to stop any harassing behavior are expected to comply immediately.
+  </p>
 
-        <p>
-          All attendees, speakers, sponsors, partners and volunteers at our camp are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
-        </p>
+  <p>
+    Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.
+  </p>
 
-        <h3>Responsible and enforcing this Code of Conduct</h3>
+  <p>
+    If a participant engages in harassing behavior, the camp organisers may take any action they deem appropriate, including warning the offender or expulsion from the camp with no refund.
+  </p>
 
-        <p>
-          We are dedicated to providing a safe and comfortable space for all Offline Campers. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please tell an organiser immediately. You can contact
-          the camp organising team by <a href="mailto:camp@offlinefirst.org?subject=Code+of+Conduct+Help">email</a>, call Gregor directly at +1 (781) 363-4625, or talk directly to any <a href="#camp-organiser">camp organiser</a>.
-        </p>
+  <p>
+    If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of camp staff immediately.
+  </p>
 
-        <h3>The Quick Version</h3>
+  <p>
+    Camp staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the camp. We value your attendance.
+  </p>
 
-        <p>
-          Our camp is dedicated to providing a harassment-free camp experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of camp participants in any form. Sexual language and imagery is not appropriate for any camp venue, including talks, workshops, parties, Twitter and other online media. Unacceptable behavior from any camper, including sponsors and organisers with decision-making authority, will not be tolerated. Anyone asked to stop unacceptable behavior is expected to comply immediately. If a camper engages in unnacceptable behavior, the organisers reserve the right to respond with any action the community deems appropriate, up to and including ejection from camp <em>without warning and without refund</em>.
-        </p>
+  <p>
+    We expect participants to follow these rules at all camp and workshop venues and camp-related social events.
+  </p>
+</div>
 
-        <h3>The Less Quick Version</h3>
-
-        <p>
-          Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
-        </p>
-
-        <p>
-          Participants asked to stop any harassing behavior are expected to comply immediately.
-        </p>
-
-        <p>
-          Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.
-        </p>
-
-        <p>
-          If a participant engages in harassing behavior, the camp organisers may take any action they deem appropriate, including warning the offender or expulsion from the camp with no refund.
-        </p>
-
-        <p>
-          If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of camp staff immediately.
-        </p>
-
-        <p>
-          Camp staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the camp. We value your attendance.
-        </p>
-
-        <p>
-          We expect participants to follow these rules at all camp and workshop venues and camp-related social events.
-        </p>
-      </div>
-
-              <div class="team">
-          <h2><a name="camp-organiser">The Offline Camp Organisers</a></h2>
-          <ul>
-            <li>
-              <a href="http://www.twitter.com/gr2m">
-                <img src="../images/team/gregor.png" alt="" class="full_image">
-              </a>
-              Gregor Martynus <a href="http://www.twitter.com/gr2m">@gr2m</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/EventTeri">
-                <img src="../images/team/teri.jpg" alt="" class="full_image">
-              </a>
-              Teri Chadbourne <a href="http://www.twitter.com/EventTeri">@EventTeri</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/strevat">
-                <img src="../images/team/steve.jpg" alt="" class="full_image">
-              </a>
-              Steven Trevathan <a href="http://www.twitter.com/strevat">@strevat</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/Mo_Mack">
-                <img src="../images/team/maureen.jpg" alt="" class="full_image">
-              </a>
-              Maureen McElaney <a href="http://www.twitter.com/Mo_Mack">@Mo_Mack</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/BradleyHolt">
-                <img src="../images/team/bradley.jpg" alt="" class="full_image">
-              </a>
-              Bradley Holt <a href="http://www.twitter.com/BradleyHolt">@BradleyHolt</a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="../images/team/corvo.png" alt="" class="full_image">
-              </a>
-              Corvo
-            </li>
-          </ul>
-        </div>
-
-    </div>
+  <div class="profiles">
+    <h2><a name="camp-organiser">The Offline Camp Organisers</a></h2>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'team' %}
+      <li>
+        <a href="{{ post.url }}">
+          <img src="{{ post.avatar }}" alt="" class="full_image">
+        </a>
+        {{ post.name }} <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </div>
-  <script type="text/javascript">
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
-</body>
-</html>
+</div>

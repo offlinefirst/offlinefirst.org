@@ -1,277 +1,143 @@
-<!DOCTYPE html>
-<!--
+---
+layout:     camp
+title:      Offline Camp Schedule
+tab:        schedule
+---
 
-If you're offline and you know it clap your hands!
+<header>
+  <h6>
+    <span class="month">June</span>
+    <span class="day">24-27<sup>th</sup></span>
+    <span class="year">2016</span>
+  </h6>
 
--->
-<html lang="en" manifest="/cache.manifest">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes">
-  <title>Offline First Camp</title>
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+  <p class="location">
+    <a href="https://goo.gl/maps/xpfwJVuWT752">Jewett, NY<br>
+    30 Campers</a>
+  </p>
 
-  <script>
-        (function(){
-            function addFont() {
-                var style = document.createElement('style');
-                style.rel = 'stylesheet';
-                document.head.appendChild(style);
-                style.textContent = localStorage.firaSansWeb;
-            }
+  <hr>
 
-            try {
-                if (localStorage.firaSansWeb) {
-                    // The font is in localStorage, we can load it directly
-                    addFont();
-                } else {
-                    // We have to first load the font file asynchronously
-                    var request = new XMLHttpRequest();
-                    request.open('GET', '../css/fonts.css', true);
+  <p class="price">
+    <strong>$350</strong><br>
+  </p>
 
-                    request.onload = function() {
-                        if (request.status >= 200 && request.status < 400) {
-                            // We save the file in localStorage
-                            localStorage.firaSansWeb = request.responseText;
+  <p class="attend">
+    <a href="https://ti.to/offlinefirst/offline-camp">Get ticket</a>
+  </p>
 
-                            // ... and load the font
-                            addFont();
-                        }
-                    };
+</header>
+<div class="main">
+  <h2>
+    The Schedule
+  </h2>
+  <p>This schedule will be updated as we get closer to the event.</p>
 
-                    request.send();
-                }
-            } catch(ex) {
-                // maybe load the font synchronously for woff-capable browsers
-                // to avoid blinking on every request when localStorage is not available
-            }
-        }());
-      </script>
-</head>
-<body class="camp">
-  <div class="container">
-    <header>
-      <div class="logo">
-        <a href="../" class="back" title="Go to homepage">Offline First</a>
-        <h1>
-          <a href="../camp/index.html" title="Go to Offline Camp">Offline Camp</a>
-        </h1>
-      </div>
+  <h3>Friday, June 24 – arrive and get comfy</h3>
+  <p>
+    <b> Hit the road! </b> We'll be working to coordinate carpooling to the event.  If you need (or can offer!) a ride, let us know via our camper info form (coming your way soon after sign-up).
+    </p>
+  <p>
+    <b> 12:00pm - 3:30pm - Gather in Hudson (if you're flying into New York). </b> If you're flying into NYC, you can take an <a href="https://tickets.amtrak.com/itd/amtrak">Amtrak</a> train to Hudson, NY (HUD). (Caution: The trains don't leave directly from the airports, so you need to leave time to get to Penn Station.) We'll arrange a gathering place there, walkable from the station, where you can arrive anytime between 12:00pm - 3:30pm, grab some lunch, hang out with fellow campers, and get picked up for a ride the rest of the way to camp.
+    </p>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">The Event</a></li>
-          <li class="active"><a href="schedule.html">Schedule</a></li>
-          <li><a href="sponsorships.html">Sponsorships</a></li>
-          <li><a href="codeofconduct.html">Code of Conduct</a></li>
-        </ul>
-      </nav>
-    </header>
+    <p>
+    <b>4:30pm - 6:00pm  - Arrive at camp. </b>  If you're driving, you're welcome to arrive anytime after 4:30 to start enjoying all camp has to offer. Take a dip in the pool, try out the canoe or paddleboat on the pond, or rock the hammock with a good book.
+    </p>
+  <p>
+    <b>6:00pm - The fun begins! </b> We'll serve dinner, make introductions, hand out bunk assignments, and get the party started.  Our offline first discussions will start Friday evening, so we hope everyone can make it in time for dinner.
+    </p>
 
-    <div class="content">
-      <header>
-        <h6>
-          <span class="month">June</span>
-          <span class="day">24-27<sup>th</sup></span>
-          <span class="year">2016</span>
-        </h6>
-
-        <p class="location">
-          <a href="https://goo.gl/maps/xpfwJVuWT752">Jewett, NY<br>
-          30 Campers</a>
-        </p>
-
-        <hr>
-
-        <p class="price">
-          <strong>$350</strong><br>
-        </p>
-
-        <p class="attend">
-          <a href="https://ti.to/offlinefirst/offline-camp">Get ticket</a>
-        </p>
-
-      </header>
-      <div class="main">
-        <h2>
-          The Schedule
-        </h2>
-        <p>This schedule will be updated as we get closer to the event.</p>
-
-        <h3>Friday, June 24 – arrive and get comfy</h3>
-        <p>
-          <b> Hit the road! </b> We'll be working to coordinate carpooling to the event.  If you need (or can offer!) a ride, let us know via our camper info form (coming your way soon after sign-up).
-          </p>
-        <p>
-          <b> 12:00pm - 3:30pm - Gather in Hudson (if you're flying into New York). </b> If you're flying into NYC, you can take an <a href="https://tickets.amtrak.com/itd/amtrak">Amtrak</a> train to Hudson, NY (HUD). (Caution: The trains don't leave directly from the airports, so you need to leave time to get to Penn Station.) We'll arrange a gathering place there, walkable from the station, where you can arrive anytime between 12:00pm - 3:30pm, grab some lunch, hang out with fellow campers, and get picked up for a ride the rest of the way to camp.
-          </p>
-
-          <p>
-          <b>4:30pm - 6:00pm  - Arrive at camp. </b>  If you're driving, you're welcome to arrive anytime after 4:30 to start enjoying all camp has to offer. Take a dip in the pool, try out the canoe or paddleboat on the pond, or rock the hammock with a good book.
-          </p>
-        <p>
-          <b>6:00pm - The fun begins! </b> We'll serve dinner, make introductions, hand out bunk assignments, and get the party started.  Our offline first discussions will start Friday evening, so we hope everyone can make it in time for dinner.
-          </p>
-
-        <h3>Saturday, June 25 – discussions, projects, and games</h3>
-        <p>
-          <b>All Day - </b> Discuss and work freely with other offliners. We'll have group discussion, games, and 5-min soapbox sessions where you can share your favorite offline first project (or a compilation of the most hilarious error messages you've ever encountered). Breakfast, lunch, and dinner will be served, and there will be time to take advantage of our pool, pond, game room, and more!
-        </p>
-        <h3>Sunday, June 26 – discussions, projects, and games</h3>
-        <p>
-          <b>All Day (Through Dinner) - </b> The discussion and fun continue, with breakfast, lunch, and dinner served.  We'll plan to wrap up our offline first discussions before Sunday dinner.
-        </p>
-        <p>
-          <b>After Dinner - </b> If you drove to camp and need to get home early, you can take off after dinner, but you'll miss some fun! (And possibly s'mores.  We know you don't want to miss s'mores.)
-        </p>
-        <h3>Monday, June 27 – head home</h3>
-        <p>
-          <b>Morning - </b> We'll serve breakfast and get packed up. This is your shot at one last early morning dip in the pool or pond.
-        </p>
-        <p>
-          <b>11:00am - Check out</b> All campers need to be out of the facility by 11:00am on Monday.
-        </p>
-         <p>
-          <b>12:00pm - Hudson drop-off</b> If you need a ride back to Hudson, we'll be sure to have you at the Amtrak station by noon so you can grab a bite and catch the 12:31pm train to NYC. (Don't forget to leave time to travel from Penn Station to your aiport of choice.)
-        </p>
+  <h3>Saturday, June 25 – discussions, projects, and games</h3>
+  <p>
+    <b>All Day - </b> Discuss and work freely with other offliners. We'll have group discussion, games, and 5-min soapbox sessions where you can share your favorite offline first project (or a compilation of the most hilarious error messages you've ever encountered). Breakfast, lunch, and dinner will be served, and there will be time to take advantage of our pool, pond, game room, and more!
+  </p>
+  <h3>Sunday, June 26 – discussions, projects, and games</h3>
+  <p>
+    <b>All Day (Through Dinner) - </b> The discussion and fun continue, with breakfast, lunch, and dinner served.  We'll plan to wrap up our offline first discussions before Sunday dinner.
+  </p>
+  <p>
+    <b>After Dinner - </b> If you drove to camp and need to get home early, you can take off after dinner, but you'll miss some fun! (And possibly s'mores.  We know you don't want to miss s'mores.)
+  </p>
+  <h3>Monday, June 27 – head home</h3>
+  <p>
+    <b>Morning - </b> We'll serve breakfast and get packed up. This is your shot at one last early morning dip in the pool or pond.
+  </p>
+  <p>
+    <b>11:00am - Check out</b> All campers need to be out of the facility by 11:00am on Monday.
+  </p>
+   <p>
+    <b>12:00pm - Hudson drop-off</b> If you need a ride back to Hudson, we'll be sure to have you at the Amtrak station by noon so you can grab a bite and catch the 12:31pm train to NYC. (Don't forget to leave time to travel from Penn Station to your aiport of choice.)
+  </p>
 <!--         <section class="offliners">
-          <h2>Your fellow offliners</h2>
-          <ul>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-            <li>
-              <a href="#">
-              <img src="../images/catskills-lake.jpg" alt="">
-              </a>
-              Camper Name
-            </li>
-          </ul>
-         </section> -->
-      </div>
-      <section class="credits">
-        <div class="sponsors">
-          <div class="sponsor ibm">
-            <a href="https://developer.ibm.com/clouddataservices/"><img src="../images/ibmpos_black.svg" alt="" class="ibm"></a>
-            <p>A huge thank you to our foundational sponsor and partner, <a href="https://developer.ibm.com/clouddataservices/"><strong>IBM Cloud Data Services</strong></a>. Without them, this wouldn't be possible.</p>
-          </div>
-          <div class="sponsor yld">
-            <a href="https://www.yld.io/"><img src="../images/YLD_logo_black.svg" alt="" class="yld"></a>
-            <p>Diversity sponsor, <a href="https://www.yld.io/"><strong>YLD</strong></a>, is a team of motivated and experienced individuals passionate for software engineering and dream of making digital transformation possible for everyone.</p>
-          </div>
-
-          <p class="plug">Pulling the community together for a more focused conversation around offline will be tremendous for advancing offline tooling, design patterns, and making the challenge more visible. We would love to have your help.</p>
-          <a href="sponsorships.html">View our sponsorship options</a>
-        </div>
-
-        <div class="event-partners">
-          <h2>Tremendous logistical and systems support from our event partners:</h2>
-          <ul>
-            <li><img src="../images/hoodie_logo.svg" alt="Hoodie" class="hoodie"></li>
-            <li><img src="../images/MM_logo.svg" alt="Make&Model" class="makemodel"></li>
-            <li><img src="../images/bocoup.png" alt="Bocoup" class="bocoup"></li>
-          </ul>
-        </div>
-        <div class="team">
-          <h2>The Offline Camp Team</h2>
-          <ul>
-            <li>
-              <a href="http://www.twitter.com/gr2m">
-                <img src="../images/team/gregor.png" alt="" class="full_image">
-              </a>
-              Gregor Martynus <a href="http://www.twitter.com/gr2m">@gr2m</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/EventTeri">
-                <img src="../images/team/teri.jpg" alt="" class="full_image">
-              </a>
-              Teri Chadbourne <a href="http://www.twitter.com/EventTeri">@EventTeri</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/strevat">
-                <img src="../images/team/steve.jpg" alt="" class="full_image">
-              </a>
-              Steven Trevathan <a href="http://www.twitter.com/strevat">@strevat</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/Mo_Mack">
-                <img src="../images/team/maureen.jpg" alt="" class="full_image">
-              </a>
-              Maureen McElaney <a href="http://www.twitter.com/Mo_Mack">@Mo_Mack</a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/BradleyHolt">
-                <img src="../images/team/bradley.jpg" alt="" class="full_image">
-              </a>
-              Bradley Holt <a href="http://www.twitter.com/BradleyHolt">@BradleyHolt</a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="../images/team/corvo.png" alt="" class="full_image">
-              </a>
-              Corvo
-            </li>
-          </ul>
-        </div>
-        <div class="apply">
-          <span class="date">June 24–27</span>
-          <span class="price">$350</span>
-          <a href="https://ti.to/offlinefirst/offline-camp">Get Ticket</a>
-        </div>
-        <div class="clear"></div>
-      </section>
+    <h2>Your fellow offliners</h2>
+    <ul>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+      <li>
+        <a href="#">
+        <img src="../images/catskills-lake.jpg" alt="">
+        </a>
+        Camper Name
+      </li>
+    </ul>
+   </section> -->
+</div>
+<section class="credits">
+  <div class="sponsors">
+    <div class="sponsor ibm">
+      <a href="https://developer.ibm.com/clouddataservices/"><img src="../images/ibmpos_black.svg" alt="" class="ibm"></a>
+      <p>A huge thank you to our foundational sponsor and partner, <a href="https://developer.ibm.com/clouddataservices/"><strong>IBM Cloud Data Services</strong></a>. Without them, this wouldn't be possible.</p>
     </div>
+    <div class="sponsor yld">
+      <a href="https://www.yld.io/"><img src="../images/YLD_logo_black.svg" alt="" class="yld"></a>
+      <p>Diversity sponsor, <a href="https://www.yld.io/"><strong>YLD</strong></a>, is a team of motivated and experienced individuals passionate for software engineering and dream of making digital transformation possible for everyone.</p>
+    </div>
+
+    <p class="plug">Pulling the community together for a more focused conversation around offline will be tremendous for advancing offline tooling, design patterns, and making the challenge more visible. We would love to have your help.</p>
+    <a href="sponsorships.html">View our sponsorship options</a>
   </div>
-  <script type="text/javascript">
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
-</body>
-</html>
+
+  <div class="event-partners">
+    <h2>Tremendous logistical and systems support from our event partners:</h2>
+    <ul>
+      <li><img src="../images/hoodie_logo.svg" alt="Hoodie" class="hoodie"></li>
+      <li><img src="../images/MM_logo.svg" alt="Make&Model" class="makemodel"></li>
+      <li><img src="../images/bocoup.png" alt="Bocoup" class="bocoup"></li>
+    </ul>
+  </div>
+  <div class="apply">
+    <span class="date">June 24–27</span>
+    <span class="price">$350</span>
+    <a href="https://ti.to/offlinefirst/offline-camp">Get Ticket</a>
+  </div>
+  <div class="clear"></div>
+</section>

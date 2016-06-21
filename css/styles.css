@@ -256,6 +256,29 @@ background: linear-gradient(to bottom,  #1accbc 0%,#1bcba2 100%);
   display: block;
 }
 
+.camp .content header img {
+  display: block;
+  max-width: 100%;
+}
+
+.camp .content header figure {
+  margin-top: 42px;
+}
+.camp .content header figcaption h2 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.618;
+  margin: 0;
+}
+
+.camp .content header figcaption p {
+  margin: 0;
+}
+
+.camp .content header .bio {
+  font-size: .8em;
+}
+
 .camp .content header h6 {
   margin: 0;
   font-size: 36px;
@@ -435,7 +458,7 @@ div.event-partners ul li img.bocoup{
   height: auto;
 }
 
-div.team{
+div.profiles{
   margin-left: 325px;
   margin-bottom: 96px;
   float: left;
@@ -468,11 +491,11 @@ div.apply a:hover{
   color: #293641;
 }
 
-.camp div.team ul li{
+.camp div.profiles ul li{
   vertical-align: top;
 }
 
-.camp div.team ul li img{
+.camp div.profiles ul li img{
   margin: auto;
 }
 
@@ -553,7 +576,7 @@ canvas.release-confetti{
 }
 
 .camp .content ul.sponsorships span.name{
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: 600;
 }
 .camp .content ul.sponsorships span.price{
@@ -739,7 +762,7 @@ canvas.release-confetti{
     font-weight: 600;
   }
   .camp .content{
-    padding-top: 0; 
+    padding-top: 0;
     clear: left;
   }
   .camp .content header{
@@ -751,7 +774,7 @@ canvas.release-confetti{
   .camp .content header p.location,
   .camp .content header p.price{
     display: block;
-    width: 
+    width:
     100%;
   }
   .camp .content header h6 span,
@@ -770,7 +793,7 @@ canvas.release-confetti{
   }
 
   .camp img.full_image{
-    margin: 0; 
+    margin: 0;
   }
 
   section.credits{
@@ -779,23 +802,23 @@ canvas.release-confetti{
   }
   div.sponsors,
   div.event-partners,
-  div.team,
+  div.profiles,
   div.apply{
     margin: 48px 5%;
     width: 90%;
   }
 
-  .camp div.team ul li{
+  .camp div.profiles ul li{
     margin: 24px 2.5%;
     padding: 0;
     float: left;
     width: 45%;
   }
-  .camp div.team ul li img{
+  .camp div.profiles ul li img{
     height: auto;
     width: 100%;
   }
-  .camp div.team ul li a{
+  .camp div.profiles ul li a{
     display: block;
   }
 }

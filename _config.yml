@@ -1,0 +1,5 @@
+name: Offline First
+github_url: https://github.com/offlinefirst/offlinefirst.org
+
+# blog posts
+permalink: /camp/campers/:title.html

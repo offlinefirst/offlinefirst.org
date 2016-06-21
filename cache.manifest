@@ -1,13 +1,18 @@
+---
+---
 CACHE MANIFEST
 # v000040
 
 CACHE:
 /
 /camp/
+/camp/codeofconduct.html
+/camp/schedule.html
+/camp/sponsorships.html
 /chat/
-/code-of-conduct/
 /events/
 /news/
+/camp/
 /css/normalize.css
 /css/styles.css
 /css/fonts.css
@@ -30,6 +35,11 @@ CACHE:
 /images/team/maureen.jpg
 /images/team/steve.jpg
 /images/team/teri.jpg
+
+# campers
+{% for post in site.posts %}
+{{ post.url }}
+{{ post.avatar }}{% endfor %}
 
 NETWORK:
 /favicon.ico
