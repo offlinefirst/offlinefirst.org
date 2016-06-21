@@ -1,5 +1,6 @@
 ---
 layout:   camper-profile
+root_path: ../../
 type:     camper
 name:     Patricia Garcia
 twitter:  patggs

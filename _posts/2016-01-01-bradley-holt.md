@@ -1,5 +1,6 @@
 ---
 layout:   camper-profile
+root_path: ../../
 type:     team
 name:     Bradley Holt
 twitter:  BradleyHolt

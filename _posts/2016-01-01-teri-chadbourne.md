@@ -1,5 +1,6 @@
 ---
 layout:   camper-profile
+root_path: ../../
 type:     team
 name:     Teri Chadbourne
 twitter:  eventteri
