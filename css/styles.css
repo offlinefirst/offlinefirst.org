@@ -420,6 +420,9 @@ div.sponsor img.ibm{
 div.sponsor img.yld{
   width: 120px;
 }
+div.sponsor img.meetup{
+  width: 200px;
+}
 
 div.event-partners{
   margin-left: 325px;
