@@ -25,5 +25,6 @@ I hope that everyone goes home (more) excited about Offline First. I hope that p
 
 ### Can you describe what Offline First means to you in a sentence?
 
-Offline First is an approach to application design in which a web, mobile, desktop, or Internet of Things (IoT) application is built for offline usage first and is then progressively enhanced to take advantage of network connectivity when available.  
+Offline First is an approach to application design in which a web, mobile, desktop, or Internet of Things (IoT) application is built for offline usage first and is then progressively enhanced to take advantage of network connectivity when available.   
+
 _Bradley Holt is a Developer Advocate with IBM Cloud Data Services. Bradley writes and speaks about topics such as CouchDB, PouchDB, Offline First, PHP, Node.js, and Domain-Driven Design._
