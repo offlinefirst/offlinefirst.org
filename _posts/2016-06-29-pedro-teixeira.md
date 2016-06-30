@@ -1,10 +1,10 @@
 ---
 layout:   camper-profile
 root_path: ../../
-type:     team
+type:     camper
 name:     Pedro Teixeira
-twitter:  strevat
-avatar:   /images/team/pedroteixeria.jpg
+twitter:  pgte
+avatar:   /images/campers/pedroteixeria.jpg
 ---
 
 ### What do you find interesting about the concept of Offline First?
