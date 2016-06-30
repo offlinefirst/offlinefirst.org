@@ -1,10 +1,10 @@
 ---
 layout:   camper-profile
 root_path: ../../
-type:     team
+type:     camper
 name:     Joel Worrall
 twitter:  tangollama
-avatar:   /images/team/joelworrall.jpg
+avatar:   /images/campers/joelworrall.jpg
 ---
 
 ### What do you find interesting about the concept of Offline First?
