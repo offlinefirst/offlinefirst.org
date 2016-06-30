@@ -17,7 +17,7 @@ The opportunity to connect with some of the more important work (and people behi
 
 ### Who are you looking forward to meeting at Offline Camp, and why?
 
-Pedro from YLD (b/c we’ve been done work together on HospitalRun) and Gregor of Neighbor Hoodie (b/c Gregor is a cool name :))
+Pedro from YLD (b/c we’ve been done work together on HospitalRun) and Gregor of Neighbourhoodie (b/c Gregor is a cool name :))
 
 ### What do you hope to be an outcome of Offline Camp?
 
