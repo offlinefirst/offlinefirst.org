@@ -4,7 +4,7 @@ root_path: ../../
 type:     camper
 name:     Pedro Teixeira
 twitter:  pgte
-avatar:   /images/campers/pedroteixeria.jpg
+avatar:   /images/campers/pedrotexeira.jpg
 ---
 
 ### What do you find interesting about the concept of Offline First?
