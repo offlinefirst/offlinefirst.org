@@ -1,7 +1,7 @@
 ---
 ---
 CACHE MANIFEST
-# v000048
+# v000049
 
 CACHE:
 /
@@ -12,6 +12,7 @@ CACHE:
 /chat/
 /events/
 /news/
+/connect/
 /camp/
 /css/normalize.css
 /css/styles.css
