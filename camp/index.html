@@ -143,26 +143,7 @@ root_path:  ../
       {% endfor %}
     </ul>
   </div><!-- /.team -->
-  <div class="profiles" id="campers">
-    <h2>Campers</h2>
-
-    <p>
-      Here are some of the attendees from the very first Offline Camp in NY earlier this year:
-    </p>
-
-    <ul>
-    {% for post in site.posts %}
-    {% if post.type == 'camper' %}
-    <li>
-      <a href="{{ post.url }}">
-        <img src="{{ post.avatar }}" alt="" class="full_image">
-      </a>
-      {{ post.name }} <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
-    </li>
-    {% endif %}
-    {% endfor %}
-    </ul>
-  </div><!-- /.campers -->
+  
   <div class="apply">
     <span class="date">November 4-7, 2016</span>
     <span class="price">TBA</span>
