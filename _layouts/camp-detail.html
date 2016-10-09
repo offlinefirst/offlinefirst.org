@@ -56,13 +56,7 @@
 <body class="camp">
   <div class="container">
     <header>
-      <div class="logo">
-        <a href="{{ page.root_path }}" class="back" title="Go to homepage">Offline First</a>
-        <h1>
-          <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp">Offline Camp</a>
-        </h1>
-      </div>
-
+      <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
       <nav>
         <ul>
           <li{% if page.tab == 'event' %} class="active"{% endif %}><a href="{{ page.root_path }}camp">The Event</a></li>

@@ -1,0 +1,18 @@
+<!-- TODO: Create team page -->
+
+<div class="profiles">
+ <a name="organizers"></a>
+ <h2>The Offline Camp Team</h2>
+  <ul>
+    {% for post in site.posts %}
+    {% if post.type == 'team' %}
+    <li>
+      <a href="{{ post.url }}">
+        <img src="{{ post.avatar }}" alt="" class="full_image">
+      </a>
+      {{ post.name }} <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div><!-- /.team -->
