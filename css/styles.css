@@ -204,6 +204,7 @@ div.clear{
 }
 
 /* camp */
+
 .camp .content {
   padding-top: 100px;
 }
@@ -539,6 +540,10 @@ div.apply a:hover{
   text-decoration: none;
 }
 
+.video {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
 
 /* Sponsorships */
 
