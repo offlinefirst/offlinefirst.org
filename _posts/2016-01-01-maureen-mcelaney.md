@@ -1,7 +1,7 @@
 ---
 layout:   camper-profile
 root_path: ../../
-type:     team
+type:     
 name:     Maureen McElaney
 twitter:  Mo_Mack
 avatar:   /images/team/maureen.jpg
@@ -17,7 +17,6 @@ I’ve done Quality Assurance Testing and Automation, as well as worked within a
 
 ### Who are you looking forward to meeting at Offline Camp, and why?
 
-I’m hoping to encourage [@janecakemaster](https://twitter.com/janecakemaster) to rap for us.
 
 ### What do you hope to be an outcome of Offline Camp?
 
