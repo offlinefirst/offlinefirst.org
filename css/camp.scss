@@ -39,6 +39,22 @@
     font-weight: 600;
     line-height: 2.000em;
     padding: 12px 30px;
+    transition: all .05s linear;
+
+      &:hover {
+        background: #fff;
+        color: #3E2C4B;
+      }
+
+      &.pink {
+        border-color: #FF99C6;
+        color: #FF99C6;
+
+        &:hover {
+          background: #FF99C6;
+          color: #3E2C4B;
+        }
+      }
   }
 
   .camp__wrapper {
@@ -76,7 +92,7 @@
     padding-top: 130px;
 
     header {
-      position: relative;
+      margin-bottom: 150px;
 
       a.logo {
         background: url(../images/camp/offline-camp-berlin.svg) no-repeat 0 0;
@@ -124,6 +140,7 @@
       font-size: 4.500em;
       font-weight: 700;
       letter-spacing: -2px;
+      margin-bottom: 120px;
       width: 61.5153788%;
     }
 
@@ -144,7 +161,7 @@
           content: "";
           height: 10px;
           position: absolute;
-          right: 0;
+          right: -6px;
           top: 40%;
           width: 10px;
         }
@@ -305,11 +322,6 @@
           font-weight: 700;
         }
       }
-
-      a.sponsor {
-        border-color: #FF99C6;
-        color: #FF99C6;
-      }
     }
 
     div.camp__supporter {
@@ -403,10 +415,6 @@
         max-width: 560px;
       }
 
-      a.attend {
-        border-color: #FF99C6;
-        color: #FF99C6;
-      }
     }
 
     section.past__camps {
@@ -453,6 +461,11 @@
         font-weight: 600;
         padding: 17px;
         vertical-align: top;
+
+        &:hover {
+          background: #fff;
+          color: #3E2C4B;
+        }
       }
     }
 
