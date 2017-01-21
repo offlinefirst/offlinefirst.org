@@ -5,5 +5,5 @@ type:     support
 name:     Make&Model
 class:    makemodel
 site:     http://www.makemodel.co/
-logo:     /images/MM_logo.svg
+logo:     /images/camp/MM.svg
 ---

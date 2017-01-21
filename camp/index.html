@@ -45,9 +45,10 @@ root_path:  ../
 
 <section class="camp__sponsors">
   <div class="camp__wrapper">
+    <h4>Sponsors</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' %}
+      {% if post.type == 'sponsor' and post.location == 'berlin'  %}
       <li>
         <a href="{{ post.url }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -61,24 +62,26 @@ root_path:  ../
 </section>
 
 <section class="camp__support">
-  <div class="camp__support__request l-col">
-    <p>Pulling the community together for a more focused conversation around offline will be tremendous for advancing offline tooling, design patterns, and making the challenge more visible.</p>
-    <p>We would love to have your help.</p>
-    <a href="#" class="sponsor">Sponsor</a>
-  </div>
-  <div class="camp__supporter r-col">
-    <p>Huge thank you for the logistics and systems support from our event partners.</p>
-    <ul>
-      {% for post in site.posts %}
-      {% if post.type == 'support' %}
-      <li>
-        <a href="{{ post.url }}">
-          <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
-        </a>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
+  <div class="camp__wrapper">
+    <div class="camp__support__request">
+      <p>Pulling the community together for a more focused conversation around offline will be tremendous for advancing offline tooling, design patterns, and making the challenge more visible.</p>
+      <p>We would love to have your help.</p>
+      <a href="#" class="sponsor">Sponsor</a>
+    </div>
+    <div class="camp__supporter">
+      <p>Huge thank you for the logistics and systems support from our event partners.</p>
+      <ul>
+        {% for post in site.posts %}
+        {% if post.type == 'support' %}
+        <li>
+          <a href="{{ post.url }}">
+            <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -90,19 +93,22 @@ root_path:  ../
   </section>
 
   <div class="camp__wrapper">
-    <section class="past__camps l-col">
-      <h3>Past Camps</h3>
+    <!-- <section class="past__camps l-col">
+      <h4>Past Camps</h4>
       <a href="#">New York 2016</a>
-    </section>
+    </section> -->
 
-    <section class="newsletter r-col">
-      <h3>Sign up for offlinefirst.org updates</h3>
+    <section class="newsletter">
+      <h4>Sign up for offlinefirst.org updates</h4>
       <!-- TODO: include mailchimp form -->
-      <input type="text" name="" id="" placeholder="ilove@emails.com">
+      <form action="">
+        <input type="text" name="" id="" placeholder="ilove@emails.com">
+        <input type="submit" value="Subscribe">
+      </form>
     </section>
-  </div>
 
-  <span class="credit">
-    Design by <a href="http://www.makemodel.co">Make&amp;Model Co</a>
-  </span>
+    <span class="credit">
+      Designed and Developed by <a href="http://www.makemodel.co">Make&amp;Model Co</a>
+    </span>
+  </div>
 </footer>

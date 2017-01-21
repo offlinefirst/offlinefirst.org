@@ -8,6 +8,16 @@
   font-family: 'Lato', sans-serif;
 
   // Utility
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {
+    color: #FF99C6;
+    font-size: 2.250em;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+  }
+
   a {
     text-decoration: none;
   }
@@ -19,9 +29,10 @@
 
   ul {
     padding-left: 0;
+    list-style: none;
   }
 
-  a.attend {
+  a.attend, a.sponsor {
     color: #fff;
     border: 6px solid #fff;
     font-size: 1.125em;
@@ -72,6 +83,7 @@
         display: inline-block;
         text-indent: -9999px;
         height: 81px;
+        vertical-align: top;
         width: 286px;
       }
 
@@ -98,6 +110,10 @@
               padding: 5%;
               text-align: center;
               width: 100%;
+
+              &.attend {
+                margin-top: -5px;
+              }
             }
           }
         }
@@ -226,24 +242,40 @@
     background-color: #3E2C4B;
     color: #fff;
 
+    .camp__wrapper {
+      padding-top: 90px;
+    }
+
+    h4 {
+      margin: 0 auto 72px;
+      width: 80.8270677%;
+    }
+
     ul {
-      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      margin: auto;
+      width: 80.8270677%;
 
       li {
-        position: relative;
+        flex-wrap: wrap;
+        margin-bottom: 90px;
+        width: 47.4418605%;
+
+        &:nth-of-type(2n) {
+          padding-left: 04.1353383%;
+        }
 
         a {
-          position: relative;
+          color: #FF99C6;
+          text-decoration: underline;
 
           img.sponsor_logo {
-            position: relative;
+            width: 100%;
 
-            .ibm {
-              position: relative;
-            }
-
-            .yld {
-              position: relative;
+            &.ibm {
+              max-width: 258px;
             }
           }
 
@@ -256,40 +288,54 @@
   section.camp__support {
     background-color: #3E2C4B;
     color: #fff;
+    padding-bottom: 120px;
+
+    .camp__wrapper {
+      display: flex;
+      justify-content: center;
+    }
 
     div.camp__support__request {
-      position: relative;
+      width: 38.3458647%;
 
       p {
-        position: relative;
+        padding-bottom: 12px;
+
+        &:nth-of-type(2n) {
+          font-weight: 700;
+        }
       }
 
       a.sponsor {
-        position: relative;
+        border-color: #FF99C6;
+        color: #FF99C6;
       }
     }
 
     div.camp__supporter {
-      position: relative;
+      padding-left: 04.1353383%;
+      width: 38.3458647%;
 
       p {
         position: relative;
       }
 
       ul {
-        position: relative;
+        display: flex;
+        flex-wrap: wrap;
 
         li {
-          position: relative;
+          width: 40%;
+          padding: 24px 10% 24px 0;
 
           a {
             position: relative;
 
             img.support_logo {
-              position: relative;
+              width: 100%;
 
               &.makemodel {
-                position: relative;
+                max-width: 80px;
               }
 
               &.hoodie {
@@ -308,31 +354,63 @@
 
   // Footer
   footer {
-    background-color: #3E2C4B;
+    background-color: #443252;
     color: #fff;
 
+    h4 {
+      color: #fff;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .camp__wrapper {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding-top: 60px;
+    }
+
     section.tickets {
-      position: relative;
+      text-align: center;
+      padding-bottom: 120px;
+
+      &::before {
+        background: url(/images/camp/ziggy.svg) no-repeat center center transparent;
+        content: "";
+        display: block;
+        height: 50px;
+        margin: auto;
+        max-width: 400px;
+        position: relative;
+        top: -25px;
+        width: 100%;
+      }
 
       span.price {
-        position: relative;
+        display: block;
+        font-size: 2.250em;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: 90px;
       }
 
       p {
-        position: relative;
+        display: block;
+        font-size: 2.250em;
+        font-weight: 300;
+        line-height: 1.167em;
+        margin: 0 auto 54px;
+        max-width: 560px;
       }
 
       a.attend {
-        position: relative;
+        border-color: #FF99C6;
+        color: #FF99C6;
       }
     }
 
     section.past__camps {
       position: relative;
-
-      h3 {
-        position: relative;
-      }
 
       a {
         position: relative;
@@ -340,15 +418,51 @@
     }
 
     section.newsletter {
-      position: relative;
+      margin: auto;
+      max-width: 600px;
+      text-align: center;
 
-      h3 {
-        position: relative;
+      input[type=text] {
+        background: none;
+        border: 6px solid #FF99C6;
+        color: #FF99C6;
+        font-size: 2.25em;
+        font-weight: 100;
+        line-height: 1.5em;
+        text-indent: 20px;
+        width: 60%;
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: rgba(255, 153, 198, 0.5);
+        }
+      }
+      input[type=submit] {
+        background: none;
+        border: 6px solid #FFF;
+        color: #FFF;
+        font-size: 1.125em;
+        font-weight: 600;
+        padding: 17px;
+        vertical-align: top;
       }
     }
 
     span.credit {
-      position: relative;
+      display: block;
+      clear: both;
+      text-align: center;
+      padding-top: 180px;
+      padding-bottom: 48px;
+      width: 100%;
 
       a {
         position: relative;
