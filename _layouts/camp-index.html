@@ -15,6 +15,7 @@
   <link rel="apple-touch-icon" sizes="120x120" href="{{ page.root_path }}images/apple-touch-icon-120x120.png" />
   <link rel="apple-touch-icon" sizes="144x144" href="{{ page.root_path }}images/apple-touch-icon-144x144.png" />
   <link rel="apple-touch-icon" sizes="152x152" href="{{ page.root_path }}images/apple-touch-icon-152x152.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
   <script>
         (function(){
@@ -56,24 +57,27 @@
 <body class="camp">
   <div class="container">
     <section class="masthead">
-      <header>
-        <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
-        <nav>
-          <ul>
-            <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Rules</a></li>
-            <li{% if page.tab == 'event' %} class="active"{% endif %}><a href="{{ page.root_path }}camp">Venue</a></li>
-            <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
-            <li{% if page.tab == 'sponsorships' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/sponsorships.html">Sponsorships</a></li>
-            <li{% if page.tab == 'sponsorships' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/sponsorships.html">Team</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h1>A 3-day retreat to explore Offline First development and design</h1>
-      <ul>
-        <li>30 Campers</li>
-        <li>Nov 4-7, 2016</li>
-        <li>Santa Margarita, CA</li>
-      </ul>
+      <div class="camp__wrapper">
+        <header>
+          <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
+          <nav>
+            <ul>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Rules</a></li>
+              <li{% if page.tab == 'event' %} class="active"{% endif %}><a href="{{ page.root_path }}camp">Venue</a></li>
+              <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
+              <li{% if page.tab == 'sponsorships' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/sponsorships.html">Sponsors</a></li>
+              <li{% if page.tab == 'sponsorships' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/sponsorships.html">Team</a></li>
+              <li><a href="#" class="attend">Attend</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1>A 3-day retreat to explore Offline First development and design</h1>
+        <ul class="glance-details">
+          <li>30 Campers</li>
+          <li>Nov 4-7, 2016</li>
+          <li>Santa Margarita, CA</li>
+        </ul>
+      </div>
     </section>
 
     <div class="content">

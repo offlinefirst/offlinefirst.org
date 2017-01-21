@@ -5,25 +5,35 @@ root_path:  ../
 ---
 
 <section class="event__description">
-  <img src="" alt="" class="event__depiction">
-  <h2>
-    We're taking the Offline First community for a four day weekend on the central coast of California.
-  </h2>
-  <p>We’re developers interested in making our apps work without constant internet connection. We’re designers exploring UX patterns that maintain user understanding of system state. We are all working on problems that very few have worked on before us, and we know it will take a wide range of points of view to solve the big challenges ahead of us. </p>
-  <p>Join us for an exciting three days away from it all with the Offline First community!</p>
+  <div class="camp__wrapper">
+    <div class="l-col">
+      <img src="{{ page.root_path }}images/camp/california-map.png" alt="" class="event__depiction">
+    </div>
+    <div class="r-col">
+      <h2>
+        We're taking the Offline First community for a four day weekend on the central coast of California.
+      </h2>
+      <p>We’re developers interested in making our apps work without constant internet connection. We’re designers exploring UX patterns that maintain user understanding of system state. We are all working on problems that very few have worked on before us, and we know it will take a wide range of points of view to solve the big challenges ahead of us. </p>
+      <p>Join us for an exciting three days away from it all with the Offline First community!</p>
+    </div>
+    <div class="clear"></div>
+  </div>
 </section>
+
 <section class="event__description__details">
-  <div class="event__description__detail">
-    <h3>All within one (very) big house.</h3>
-    <p>Located in Santa Margarita, California, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
-  </div>
-  <div class="event__description__detail">
-    <h3>Yes, we will be adults.</h3>
-    <p>Located in Santa Margarita, California, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
-  </div>
-  <div class="event__description__detail">
-    <h3>There will be edible food.</h3>
-    <p>Located in Santa Margarita, California, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
+  <div class="camp__wrapper">
+    <div class="event__description__detail">
+      <h3>One big house.</h3>
+      <p>Located in Santa Margarita, California, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
+    </div>
+    <div class="event__description__detail">
+      <h3>Code of Conduct.</h3>
+      <p>All attendees, speakers, sponsors and volunteers at our camp are required to agree with the Offline Camp code of conduct. If you have any questions or suggestions on how we can make Offline Camp more safe and inclusive for campers, please let us know.</p>
+    </div>
+    <div class="event__description__detail">
+      <h3>Fantastic food.</h3>
+      <p>Located in Santa Margarita, California, the camp will mostly take place inside one large house. There will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
+    </div>
   </div>
 </section>
 
@@ -34,18 +44,20 @@ root_path:  ../
 </section>
 
 <section class="camp__sponsors">
-  <ul>
-    {% for post in site.posts %}
-    {% if post.type == 'sponsor' %}
-    <li>
-      <a href="{{ post.url }}">
-        <img src="{{ post.logo }}" alt="" class="sponsor_logo">
-      </a>
-      {{ post }}
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
+  <div class="camp__wrapper">
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' %}
+      <li>
+        <a href="{{ post.url }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{ post }}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 <section class="camp__support">
@@ -61,7 +73,7 @@ root_path:  ../
       {% if post.type == 'support' %}
       <li>
         <a href="{{ post.url }}">
-          <img src="{{ post.logo }}" alt="" class="support_logo">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
         </a>
       </li>
       {% endif %}
@@ -76,16 +88,21 @@ root_path:  ../
     <p>Super Early bird pricing ends Sept 9 (or until they sell out)</p>
     <a href="#" class="attend">Attend</a>
   </section>
-  <section class="past__camps l-col">
-    <h3>Past Camps</h3>
-    <a href="#">New York 2016</a>
-  </section>
-  <section class="newsletter r-col">
-    <h3>Sign up for offlinefirst.org updates</h3>
-    <!-- TODO: include mailchimp form -->
-    <input type="text" name="" id="" placeholder="ilove@emails.com">
-  </section>
+
+  <div class="camp__wrapper">
+    <section class="past__camps l-col">
+      <h3>Past Camps</h3>
+      <a href="#">New York 2016</a>
+    </section>
+
+    <section class="newsletter r-col">
+      <h3>Sign up for offlinefirst.org updates</h3>
+      <!-- TODO: include mailchimp form -->
+      <input type="text" name="" id="" placeholder="ilove@emails.com">
+    </section>
+  </div>
+
   <span class="credit">
-    Design by <a href="http://www.makemodel.co">Make&Model Co</a>
+    Design by <a href="http://www.makemodel.co">Make&amp;Model Co</a>
   </span>
 </footer>
