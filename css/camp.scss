@@ -96,6 +96,7 @@
   // Masthead and headers
   section.masthead {
     background-image: url(../images/camp/masthead-bg.png);
+    background-color: #3E2C4B;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -251,6 +252,11 @@
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         padding-bottom: 100px;
         margin-bottom: 100px;
+
+        @media (screen and max-width: 800px) {
+          padding-bottom: 36px;
+          margin-bottom: 0;
+        }
       }
 
       @media (screen and max-width: 900px) {
@@ -317,7 +323,7 @@
       margin-bottom: 150px;
 
       @media (screen and max-width: 800px) {
-        margin-bottom: 60px;
+        margin-bottom: 36px;
       }
 
       ::selection {
@@ -347,6 +353,7 @@
   section.attend__strip {
     background-color: #443252;
     color: #fff;
+    padding: 36px 0;
     text-align: center;
 
     span.price {
@@ -371,6 +378,18 @@
       text-align: left;
       padding-left: 2.5%;
       vertical-align: middle;
+      margin: 0;
+
+      @media (screen and max-width: 800px) {
+        margin-top: 18px;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      @media (screen and max-width: 600px) {
+        font-size: 1.500em;
+        padding: 0 30px;
+      }
     }
   }
 
@@ -396,10 +415,19 @@
       margin: auto;
       width: 80.8270677%;
 
+      @media (screen and max-width: 800px) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
       li {
         flex-wrap: wrap;
         margin-bottom: 90px;
         width: 47.4418605%;
+
+        @media (screen and max-width: 800px) {
+          margin-bottom: 36px;
+          width: 100%;
+        }
 
         &:nth-of-type(2n) {
           padding-left: 04.1353383%;
@@ -428,13 +456,26 @@
     color: #fff;
     padding-bottom: 120px;
 
+    @media (screen and max-width: 800px) {
+      padding-bottom: 36px;
+    }
+
     .camp__wrapper {
       display: flex;
       justify-content: center;
+
+      @media (screen and max-width: 800px) {
+        flex-wrap: wrap;
+      }
     }
 
     div.camp__support__request {
       width: 38.3458647%;
+
+      @media (screen and max-width: 800px) {
+        margin-bottom: 36px;
+        width: 80.8270677%;
+      }
 
       p {
         padding-bottom: 12px;
@@ -449,6 +490,13 @@
       padding-left: 04.1353383%;
       width: 38.3458647%;
 
+      @media (screen and max-width: 800px) {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 42px;
+        padding: 42px 0 0 0;
+        width: 80.8270677%;
+      }
+
       p {
         margin-bottom: 36px;
       }
@@ -462,6 +510,12 @@
           box-sizing: border-box;
           width: 40%;
 
+          @media (screen and max-width: 800px) {
+            margin: auto;
+            text-align: center;
+            width: 80%;
+          }
+
           a {
 
             img.support_logo {
@@ -469,6 +523,11 @@
 
               &.makemodel {
                 max-width: 50px;
+
+                @media (screen and max-width: 800px) {
+                  max-width: 100px;
+                  width: 40%;
+                }
               }
 
               &.hoodie {
@@ -501,11 +560,19 @@
     .camp__wrapper {
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       padding-top: 60px;
+
+      @media (screen and max-width: 800px) {
+        padding-top: 12px;
+      }
     }
 
     section.tickets {
       text-align: center;
       padding-bottom: 120px;
+
+      @media (screen and max-width: 800px) {
+        padding-bottom: 72px;
+      }
 
       &::before {
         background: url(/images/camp/ziggy.svg) no-repeat center center transparent;
@@ -525,6 +592,10 @@
         font-weight: 700;
         margin-bottom: 30px;
         margin-top: 90px;
+
+        @media (screen and max-width: 800px) {
+          margin-top: 36px;
+        }
       }
 
       p {
@@ -534,6 +605,11 @@
         line-height: 1.167em;
         margin: 0 auto 54px;
         max-width: 560px;
+
+        @media (screen and max-width: 600px) {
+          font-size: 1.500em;
+          padding: 0 30px;
+        }
       }
 
     }
@@ -561,6 +637,10 @@
         text-indent: 20px;
         width: 60%;
 
+        @media (screen and max-width: 500px) {
+          width: 80%;
+        }
+
         &::-webkit-input-placeholder {
           color: rgba(255, 153, 198, 0.5);
         }
@@ -582,6 +662,11 @@
         font-weight: 600;
         padding: 17px;
         vertical-align: top;
+
+        @media (screen and max-width: 500px) {
+          margin-top: 6px;
+          width: 80%;
+        }
 
         &:hover {
           background: #fff;
