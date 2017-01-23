@@ -3,6 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Bradley Holt
+location: berlin
 twitter:  BradleyHolt
 avatar:   /images/team/bradley.jpg
 ---

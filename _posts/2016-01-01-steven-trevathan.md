@@ -3,6 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Steven Trevathan
+location: berlin
 twitter:  strevat
 avatar:   /images/team/steve.jpg
 ---

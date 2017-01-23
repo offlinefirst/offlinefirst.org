@@ -5,7 +5,7 @@
   <title>{{ page.title }}</title>
   <link rel="shortcut icon" href="{{ page.root_path }}favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="{{ page.root_path }}css/normalize.css">
-  <link rel="stylesheet" href="{{ page.root_path }}css/styles.css">
+  <link rel="stylesheet" href="{{ page.root_path }}css/camp.css">
   <link rel="apple-touch-icon" href="{{ page.root_path }}images/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="57x57" href="{{ page.root_path }}images/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="{{ page.root_path }}images/apple-touch-icon-60x60.png" />
@@ -53,19 +53,24 @@
         }());
       </script>
 </head>
-<body class="camp">
+<body class="camp detail">
   <div class="container">
-    <header>
-      <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
-      <nav>
-        <ul>
-          <li{% if page.tab == 'event' %} class="active"{% endif %}><a href="{{ page.root_path }}camp">The Event</a></li>
-          <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
-          <li{% if page.tab == 'sponsorships' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/sponsorships.html">Sponsorships</a></li>
-          <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Code of Conduct</a></li>
-        </ul>
-      </nav>
-    </header>
+    <section class="masthead">
+      <div class="camp__wrapper">
+        <header>
+          <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
+          <nav>
+            <ul>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Rules</a></li>
+              <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
+              <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/faq.html">FAQ</a></li>
+              <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/team.html">Team</a></li>
+              <li><a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend pink">Apply</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </section>
 
     <div class="content">
       {{ content }}

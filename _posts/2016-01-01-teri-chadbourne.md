@@ -3,6 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Teri Chadbourne
+location: berlin
 twitter:  eventteri
 avatar:   /images/team/teri.jpg
 ---
@@ -26,5 +27,5 @@ I think it would be awesome to collect and share examples of the most hilarious 
 ### Can you describe what Offline First means to you in a sentence?
 
 Offline First is a development and design approach improves user experience by treating a lack of constant internet access as the norm, not an error condition.
-  
+
 _Teri Chadbourne plans events and commands an army of rock-paper-scissors-playing robots for the Developer Advocacy team at IBM Cloud Data Services. As a Certified Meeting Professional, she should in theory be able to explain the differences between French, Russian, American, and English catering service. In reality, a few of these details may have slipped her mind during all of the event planning, rock climbing, softball captaining, and toddler babysitting of late._

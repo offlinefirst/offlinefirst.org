@@ -20,9 +20,15 @@
   }
 
   // Utility
-  h1 {}
+  h1 {
+    font-size: 4.500em;
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
   h2 {}
-  h3 {}
+  h3 {
+    font-weight: 900;
+  }
   h4 {
     color: #FF99C6;
     font-size: 2.250em;
@@ -31,7 +37,7 @@
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   p {
@@ -51,6 +57,7 @@
     font-weight: 600;
     line-height: 2.000em;
     padding: 12px 30px;
+    text-decoration: none;
     transition: all .05s linear;
 
       &:hover {
@@ -162,10 +169,29 @@
               line-height: 2.000em;
               padding: 5%;
               text-align: center;
+              text-decoration: none;
               width: 100%;
 
               &.attend {
                 margin-top: -5px;
+              }
+            }
+
+            &.active {
+              a {
+                color: #00FFE6;
+                position: relative;
+
+                &::after {
+                  background: #00FFE6;
+                  content: "";
+                  height: 2px;
+                  left: 20%;
+                  top: 43%;
+                  position: absolute;
+                  transform: rotate(45deg);
+                  width: 60%;
+                }
               }
             }
           }
@@ -627,6 +653,7 @@
       max-width: 600px;
       text-align: center;
 
+      input[type=email],
       input[type=text] {
         background: none;
         border: 6px solid #FF99C6;
@@ -685,11 +712,100 @@
 
       a {
         border-bottom: 1px solid rgba(0,255,230,.55);
+        text-decoration: none;
       }
     }
   }
 
   // Schedule
 
+
+  // Detail pages (CoC, Team, FAQ) == .camp.detail
+  &.detail h1,
+  &.detail h2,
+  &.detail h3,
+  &.detail h4,
+  &.detail p,
+  &.detail ul {
+    margin: auto;
+    max-width: 800px;
+    padding-bottom: 12px;
+    padding-top: 24px;
+  }
+
+  &.detail p {
+    padding-bottom: 12px;
+    padding-top: 0;
+  }
+
+  &.detail {
+    section.masthead {
+      background-image: none;
+      padding-bottom: 42px;
+      margin-bottom: 42px;
+
+      header {
+        margin-bottom: 0;
+      }
+    }
+
+    .content {
+      ::selection {
+        color: #006C78;
+        background: #00FFE6;
+      }
+
+      a {
+        color: #006C78;
+        background: rgba(0,255,230,.47);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul.plain-list {
+        margin: 20px auto;
+
+        li {
+          display: inline-flex;
+          font-size: 1.500em;
+          font-weight: 900;
+          margin-bottom: 12px;
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            background-color: #FF99C6;
+            border-radius: 10px;
+            content: "";
+            height: 10px;
+            position: absolute;
+            left: 0px;
+            top: 40%;
+            width: 10px;
+          }
+        }
+      }
+      ul.profiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 800px;
+        padding-top: 24px;
+
+        li {
+          margin-bottom: 36px;
+          width: 30%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 
 }

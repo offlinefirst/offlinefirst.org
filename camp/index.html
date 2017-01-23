@@ -72,7 +72,7 @@ root_path:  ../
       <p>Huge thank you for the logistics and systems support from our event partners.</p>
       <ul>
         {% for post in site.posts %}
-        {% if post.type == 'support' %}
+        {% if post.type == 'support' and post.location == 'berlin' %}
         <li>
           <a href="{{ post.url }}">
             <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
@@ -100,11 +100,17 @@ root_path:  ../
 
     <section class="newsletter">
       <h4>Sign up for offlinefirst.org updates</h4>
+
       <!-- TODO: include mailchimp form -->
-      <form action="">
-        <input type="text" name="" id="" placeholder="ilove@emails.com">
-        <input type="submit" value="Subscribe">
-      </form>
+      <div class="newsletter" id="mc_embed_signup">
+        <form action="http://hood.us4.list-manage.com/subscribe/post?u=12d36bbe9418ed6a43127cd62&amp;id=7fc00bfaef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+          <input type="email" title="Email" name="EMAIL" id="input-email" required="" placeholder="ilove@emails.com">
+          <input type="submit" value="Subscribe" title="Submit">
+        </form>
+      </div>
+
+
+
     </section>
 
     <span class="credit">
