@@ -1,9 +1,17 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-// Breakpoints will be:
+// Breakpoints:
 // 1150, 900, 800, 660
 
+$selectedTextLight: #00FFE6;
+$selectedLightBG: rgba(0,255,230,.15);
+
+$selectedTextDark: #183D39;
+$selectedDarkBG: #00FFE6;
+
+$linkColor: #3E1360;
+$linkBG: rgba(62,19,96,.05);
 
 .camp {
   -webkit-font-smoothing: antialiased;
@@ -11,8 +19,8 @@
   font-family: 'Lato', sans-serif;
 
   ::selection {
-    color: #00FFE6;
-    background: rgba(0,255,230,.15);
+    color: $selectedTextLight;
+    background: $selectedLightBG;
   }
 
   :focus {
@@ -25,10 +33,30 @@
     font-weight: 900;
     letter-spacing: -2px;
   }
-  h2 {}
+
+  h2 {
+
+    strong {
+      font-weight: 900;
+      color: $selectedTextDark;
+      position: relative;
+
+      &::after {
+        background: #00FFE6;
+        content: "";
+        left: -5%;
+        height: 110%;
+        position: absolute;
+        width: 110%;
+        z-index: -1;
+      }
+    }
+  }
+
   h3 {
     font-weight: 900;
   }
+
   h4 {
     color: #FF99C6;
     font-size: 2.250em;
@@ -38,6 +66,8 @@
 
   a {
     text-decoration: underline;
+    color: $linkColor;
+    background: $linkBG;
   }
 
   p {
@@ -88,12 +118,12 @@
 
   .l-col {
     float: left;
-    width: 50%;
+    width: 40%;
   }
 
   .r-col {
     float: right;
-    width: 50%;
+    width: 60%;
   }
 
   .clear {
@@ -109,12 +139,11 @@
     background-attachment: fixed;
     color: #FFFFFF;
     padding-top: 72px;
-    margin-bottom: 180px;
+    margin-bottom: 48px;
     padding-bottom: 180px;
-    padding-top: 130px;
+    padding-top: 60px;
 
     @media (screen and max-width: 800px) {
-      padding-top: 60px;
       padding-bottom: 60px;
       margin-bottom: 0;
     }
@@ -124,18 +153,13 @@
 
       a.logo {
         background: url(../images/camp/offline-camp-berlin.svg) no-repeat 0 0;
+        background-size: 186px;
         display: inline-block;
+        height: 49px;
+        margin-top: 16px;
         text-indent: -9999px;
-        height: 81px;
         vertical-align: top;
-        width: 286px;
-
-        @media (screen and max-width: 900px) {
-          background-size: 186px;
-          height: 49px;
-          margin-top: 16px;
-          width: 186px;
-        }
+        width: 186px;
 
         @media (screen and max-width: 800px) {
           display: block;
@@ -156,6 +180,7 @@
         ul {
           display: flex;
           list-style: none;
+          perspective: 500px;
           width: 100%;
 
           li {
@@ -163,6 +188,7 @@
             width: 100%;
 
             a {
+              background: transparent;
               color: #FFFFFF;
               font-size: 1.125em;
               font-weight: 600;
@@ -185,12 +211,11 @@
                 &::after {
                   background: #00FFE6;
                   content: "";
-                  height: 2px;
-                  left: 20%;
-                  top: 43%;
+                  height: 3px;
+                  left: 15%;
+                  bottom: 0;
                   position: absolute;
-                  transform: rotate(45deg);
-                  width: 60%;
+                  width: 70%;
                 }
               }
             }
@@ -264,14 +289,14 @@
 
   .content {
     position: relative;
-    color: #350060;
+    color: #3c2442;
 
     section.event__description {
       position: relative;
 
       ::selection {
-        color: #006C78;
-        background: #00FFE6;
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
       }
 
       div.camp__wrapper {
@@ -292,21 +317,25 @@
       }
 
       img.event__depiction {
-        float: left;
-        margin-right: 05.2631579%;
+        left: -50px;
         margin-left: 03.0075188%;
+        margin-right: 05.2631579%;
+        margin-top: 90px;
         max-width: 524px;
-        width: 91.729323%;
+        position: relative;
+        width: 95.729323%;
 
         @media (screen and max-width: 900px) {
           position: absolute;
-          width: 15%;
+          width: 23%;
+          margin-top: 1%;
+          left: 0;
         }
 
         @media (screen and max-width: 660px) {
           display: block;
           float: none;
-          margin: -120px auto auto;
+          margin: 0px;
           min-width: 100px;
           position: relative;
         }
@@ -316,6 +345,7 @@
         font-size: 4.500em;
         font-weight: 900;
         letter-spacing: -3px;
+        margin-top: 24px;
 
         @media (screen and max-width: 1150px) {
           font-size: 3.375em;
@@ -353,8 +383,8 @@
       }
 
       ::selection {
-        color: #006C78;
-        background: #00FFE6;
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
       }
 
       div.event__description__detail {
@@ -460,6 +490,7 @@
         }
 
         a {
+          background: transparent;
           color: #FF99C6;
           text-decoration: underline;
 
@@ -543,6 +574,7 @@
           }
 
           a {
+            background: transparent;
 
             img.support_logo {
               width: 100%;
@@ -601,7 +633,8 @@
       }
 
       &::before {
-        background: url(/images/camp/ziggy.svg) no-repeat center center transparent;
+        background: url(/images/camp/ziggy.svg) repeat-x center center transparent;
+        background-size: 33%;
         content: "";
         display: block;
         height: 50px;
@@ -711,6 +744,7 @@
       width: 100%;
 
       a {
+        background: transparent;
         border-bottom: 1px solid rgba(0,255,230,.55);
         text-decoration: none;
       }
@@ -751,18 +785,8 @@
       }
 
       ::selection {
-        color: #006C78;
-        background: #00FFE6;
-      }
-
-      a {
-        color: #006C78;
-        background: rgba(0,255,230,.47);
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
       }
 
       ul.plain-list {
