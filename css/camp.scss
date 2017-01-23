@@ -721,23 +721,6 @@
 
 
   // Detail pages (CoC, Team, FAQ) == .camp.detail
-  &.detail h1,
-  &.detail h2,
-  &.detail h3,
-  &.detail h4,
-  &.detail p,
-  &.detail ul {
-    margin: auto;
-    max-width: 800px;
-    padding-bottom: 12px;
-    padding-top: 24px;
-  }
-
-  &.detail p {
-    padding-bottom: 12px;
-    padding-top: 0;
-  }
-
   &.detail {
     section.masthead {
       background-image: none;
@@ -750,6 +733,23 @@
     }
 
     .content {
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul {
+        margin: auto;
+        max-width: 800px;
+        padding-bottom: 12px;
+        padding-top: 24px;
+      }
+
+      p {
+        padding-bottom: 12px;
+        padding-top: 0;
+      }
+
       ::selection {
         color: #006C78;
         background: #00FFE6;
