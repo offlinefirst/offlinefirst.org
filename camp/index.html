@@ -51,7 +51,7 @@ root_path:  ../
       {% for post in site.posts %}
       {% if post.type == 'sponsor' and post.location == 'berlin'  %}
       <li>
-        <a href="{{ post.url }}">
+        <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
         </a>
         {{ post }}
@@ -75,7 +75,7 @@ root_path:  ../
         {% for post in site.posts %}
         {% if post.type == 'support' and post.location == 'berlin' %}
         <li>
-          <a href="{{ post.url }}">
+          <a href="{{ post.site }}">
             <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
           </a>
         </li>
