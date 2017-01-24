@@ -62,10 +62,10 @@
           <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
           <nav>
             <ul>
-              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Rules</a></li>
               <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
               <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/faq.html">FAQ</a></li>
               <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/team.html">Team</a></li>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Code</a></li>
               <li><a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend pink">Apply</a></li>
             </ul>
           </nav>
@@ -77,9 +77,9 @@
       {{ content }}
     </div>
     <section class="attend__strip">
-      <span class="price">€350</span>
+      <span class="price">€350 + VAT</span>
       <a href="#" class="attend">Apply</a>
-      <p>A limited number of Super Early Bird tickets are available until Feburary 10. (Save €250 while supplies last!)</p>
+      <p>A limited number of Super Early Bird tickets are available until Feburary 10. (Save €250 while supplies last!) <span>Includes food and lodging.</span></p>
     </section>
 
     <section class="camp__sponsors">
@@ -126,9 +126,10 @@
 
     <footer>
       <section class="tickets">
-        <span class="price">€350</span>
+        <span class="price">€350 + VAT</span>
         <p>A limited number of Super Early Bird tickets are available until Feburary 10. (Save €250 while supplies last!)</p>
         <a href="#" class="attend pink">Apply</a>
+        <span>Includes food and lodging.</span>
       </section>
 
       <div class="camp__wrapper">

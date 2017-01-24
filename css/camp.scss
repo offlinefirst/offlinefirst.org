@@ -155,7 +155,7 @@ $linkBG: rgba(62,19,96,.05);
         background: url(../images/camp/offline-camp-berlin.svg) no-repeat 0 0;
         background-size: 186px;
         display: inline-block;
-        height: 49px;
+        height: 50px;
         margin-top: 16px;
         text-indent: -9999px;
         vertical-align: top;
@@ -436,6 +436,12 @@ $linkBG: rgba(62,19,96,.05);
       vertical-align: middle;
       margin: 0;
 
+      span {
+        display: block;
+        font-size: 0.444em;
+        font-weight: 900;
+      }
+
       @media (screen and max-width: 800px) {
         margin-top: 18px;
         padding-left: 0;
@@ -445,7 +451,13 @@ $linkBG: rgba(62,19,96,.05);
       @media (screen and max-width: 600px) {
         font-size: 1.500em;
         padding: 0 30px;
+
+        span {
+          font-size: 0.667em;
+          padding-top: 18px;
+        }
       }
+
     }
   }
 
@@ -669,6 +681,12 @@ $linkBG: rgba(62,19,96,.05);
           font-size: 1.500em;
           padding: 0 30px;
         }
+      }
+
+      span {
+        display: block;
+        font-weight: 900;
+        margin-top: 36px;
       }
 
     }
