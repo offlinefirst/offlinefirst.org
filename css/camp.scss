@@ -39,6 +39,7 @@ $linkBG: rgba(62,19,96,.05);
     strong {
       font-weight: 900;
       color: $selectedTextDark;
+      display: inline-block;
       position: relative;
 
       &::after {
