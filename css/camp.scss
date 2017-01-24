@@ -577,7 +577,7 @@ $linkBG: rgba(62,19,96,.05);
         li {
           padding: 0 5% 24px 0;
           box-sizing: border-box;
-          width: 40%;
+          width: 50%;
 
           @media (screen and max-width: 800px) {
             margin: auto;
@@ -589,15 +589,11 @@ $linkBG: rgba(62,19,96,.05);
             background: transparent;
 
             img.support_logo {
+              padding: 30px 0 15px 0;
               width: 100%;
 
               &.makemodel {
-                max-width: 50px;
 
-                @media (screen and max-width: 800px) {
-                  max-width: 100px;
-                  width: 40%;
-                }
               }
 
               &.hoodie {
