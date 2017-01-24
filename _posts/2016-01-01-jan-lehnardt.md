@@ -2,10 +2,10 @@
 layout:   camper-profile
 root_path: ../../
 type:     team
-name:     Steven Trevathan
+name:     Jan Lehnardt
 location: berlin
-twitter:  strevat
-avatar:   /images/team/steve.jpg
+twitter:  janl
+avatar:   /images/team/jan.jpg
 ---
 
 ### What do you find interesting about the concept of Offline First?

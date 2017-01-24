@@ -2,10 +2,10 @@
 layout:   camper-profile
 root_path: ../../
 type:     team
-name:     Steven Trevathan
+name:     Glynn Bird
 location: berlin
-twitter:  strevat
-avatar:   /images/team/steve.jpg
+twitter:  glynn_bird
+avatar:   /images/team/glynn.jpg
 ---
 
 ### What do you find interesting about the concept of Offline First?

@@ -1,0 +1,849 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+// Breakpoints:
+// 1150, 900, 800, 660
+
+$selectedTextLight: #00FFE6;
+$selectedLightBG: rgba(0,255,230,.15);
+
+$selectedTextDark: #183D39;
+$selectedDarkBG: #00FFE6;
+
+$linkColor: #3E1360;
+$linkBG: rgba(62,19,96,.05);
+
+.camp {
+  -webkit-font-smoothing: antialiased;
+  background-color: #FFC7DF;
+  font-family: 'Lato', sans-serif;
+
+  ::selection {
+    color: $selectedTextLight;
+    background: $selectedLightBG;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  // Utility
+  h1 {
+    font-size: 4.500em;
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+
+    strong {
+      font-weight: 900;
+      color: $selectedTextDark;
+      position: relative;
+
+      &::after {
+        background: #00FFE6;
+        content: "";
+        left: -5%;
+        height: 110%;
+        position: absolute;
+        width: 110%;
+        z-index: -1;
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 900;
+  }
+
+  h4 {
+    color: #FF99C6;
+    font-size: 2.250em;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $linkColor;
+    background: $linkBG;
+  }
+
+  p {
+    font-size: 1.500em;
+    line-height: 1.500em;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  a.attend, a.sponsor {
+    color: #fff;
+    border: 6px solid #fff;
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 2.000em;
+    padding: 12px 30px;
+    text-decoration: none;
+    transition: all .05s linear;
+
+      &:hover {
+        background: #fff;
+        color: #3E2C4B;
+      }
+
+      &.pink {
+        border-color: #FF99C6;
+        color: #FF99C6;
+
+        &:hover {
+          background: #FF99C6;
+          color: #3E2C4B;
+        }
+      }
+  }
+
+  .camp__wrapper {
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    margin: auto;
+    max-width: 1390px;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .l-col {
+    float: left;
+    width: 40%;
+  }
+
+  .r-col {
+    float: right;
+    width: 60%;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  // Masthead and headers
+  section.masthead {
+    background-image: url(../images/camp/masthead-bg.png);
+    background-color: #3E2C4B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFFFFF;
+    padding-top: 72px;
+    margin-bottom: 48px;
+    padding-bottom: 180px;
+    padding-top: 60px;
+
+    @media (screen and max-width: 800px) {
+      padding-bottom: 60px;
+      margin-bottom: 0;
+    }
+
+    header {
+      margin-bottom: 150px;
+
+      a.logo {
+        background: url(../images/camp/offline-camp-berlin.svg) no-repeat 0 0;
+        background-size: 186px;
+        display: inline-block;
+        height: 50px;
+        margin-top: 16px;
+        text-indent: -9999px;
+        vertical-align: top;
+        width: 186px;
+
+        @media (screen and max-width: 800px) {
+          display: block;
+          margin: auto auto 24px;
+        }
+      }
+
+      nav {
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+        width: 63.9097744%;
+
+        @media (screen and max-width: 800px) {
+          width: 100%;
+        }
+
+        ul {
+          display: flex;
+          list-style: none;
+          perspective: 500px;
+          width: 100%;
+
+          li {
+            display: inline-flex;
+            width: 100%;
+
+            a {
+              background: transparent;
+              color: #FFFFFF;
+              font-size: 1.125em;
+              font-weight: 600;
+              line-height: 2.000em;
+              padding: 5%;
+              text-align: center;
+              text-decoration: none;
+              width: 100%;
+
+              &.attend {
+                margin-top: -5px;
+              }
+            }
+
+            &.active {
+              a {
+                color: #00FFE6;
+                position: relative;
+
+                &::after {
+                  background: #00FFE6;
+                  content: "";
+                  height: 3px;
+                  left: 15%;
+                  bottom: 0;
+                  position: absolute;
+                  width: 70%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    h1 {
+      position: relative;
+      font-size: 4.500em;
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin-bottom: 120px;
+      max-width: 820px;
+      width: 100%;
+
+      @media (screen and max-width: 800px) {
+        font-size: 3.375em;
+        margin-bottom: 54px;
+      }
+    }
+
+    ul.glance-details {
+      width: 100%;
+
+      li {
+        display: inline-flex;
+        font-size: 1.500em;
+        font-weight: 900;
+        position: relative;
+        padding-right: 30px;
+        margin-right: 30px;
+
+        @media (screen and max-width: 800px) {
+          font-size: 1.125em;
+        }
+
+        @media (screen and max-width: 660px) {
+          display: block;
+          line-height: 1.667em;
+          padding-left: 20px;
+        }
+
+        &::after {
+          background-color: #FFC7DF;
+          border-radius: 10px;
+          content: "";
+          height: 10px;
+          position: absolute;
+          right: -6px;
+          top: 40%;
+          width: 10px;
+
+          @media (screen and max-width: 660px) {
+            left: 0px;
+            top: 32%;
+          }
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+            @media (screen and max-width: 660px) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    color: #3c2442;
+
+    section.event__description {
+      position: relative;
+
+      ::selection {
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
+      }
+
+      div.camp__wrapper {
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        padding-bottom: 100px;
+        margin-bottom: 100px;
+
+        @media (screen and max-width: 800px) {
+          padding-bottom: 36px;
+          margin-bottom: 0;
+        }
+      }
+
+      @media (screen and max-width: 900px) {
+        .l-col, .r-col {
+          width: 100%;
+        }
+      }
+
+      img.event__depiction {
+        left: -50px;
+        margin-left: 03.0075188%;
+        margin-right: 05.2631579%;
+        margin-top: 90px;
+        max-width: 524px;
+        position: relative;
+        width: 95.729323%;
+
+        @media (screen and max-width: 900px) {
+          position: absolute;
+          width: 23%;
+          margin-top: 1%;
+          left: 0;
+        }
+
+        @media (screen and max-width: 660px) {
+          display: block;
+          float: none;
+          margin: 0px;
+          min-width: 100px;
+          position: relative;
+        }
+      }
+
+      h2 {
+        font-size: 4.500em;
+        font-weight: 900;
+        letter-spacing: -3px;
+        margin-top: 24px;
+
+        @media (screen and max-width: 1150px) {
+          font-size: 3.375em;
+        }
+
+        @media (screen and max-width: 900px) {
+          font-size: 2.625em;
+          letter-spacing: -1.5px;
+          margin-left: 30%;
+          width: 70%;
+        }
+
+        @media (screen and max-width: 660px) {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+
+      p {
+        width: 76.6917293%;
+
+        @media (screen and max-width: 660px) {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    section.event__description__details {
+      position: relative;
+      margin-bottom: 150px;
+
+      @media (screen and max-width: 800px) {
+        margin-bottom: 36px;
+      }
+
+      ::selection {
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
+      }
+
+      div.event__description__detail {
+        clear: both;
+        display: inline-block;
+        padding-right: 3%;
+        vertical-align: top;
+        width: 30%;
+
+        @media (screen and max-width: 800px) {
+          padding: 0;
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 1.875em;
+        }
+      }
+    }
+  }
+
+  section.attend__strip {
+    background-color: #443252;
+    color: #fff;
+    padding: 36px 0;
+    text-align: center;
+
+    span.price {
+      display: inline-block;
+      font-size: 2.250em;
+      font-weight: 700;
+      padding-right: 2.5%;
+      vertical-align: middle;
+    }
+
+    a.attend {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    p {
+      display: inline-block;
+      font-size: 2.250em;
+      font-weight: 300;
+      line-height: 1.167em;
+      max-width: 560px;
+      text-align: left;
+      padding-left: 2.5%;
+      vertical-align: middle;
+      margin: 0;
+
+      span {
+        display: block;
+        font-size: 0.444em;
+        font-weight: 900;
+      }
+
+      @media (screen and max-width: 800px) {
+        margin-top: 18px;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      @media (screen and max-width: 600px) {
+        font-size: 1.500em;
+        padding: 0 30px;
+
+        span {
+          font-size: 0.667em;
+          padding-top: 18px;
+        }
+      }
+
+    }
+  }
+
+  // Sponsors
+
+  section.camp__sponsors {
+    background-color: #3E2C4B;
+    color: #fff;
+
+    .camp__wrapper {
+      padding-top: 90px;
+    }
+
+    h4 {
+      margin: 0 auto 72px;
+      width: 80.8270677%;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      margin: auto;
+      width: 80.8270677%;
+
+      @media (screen and max-width: 800px) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      li {
+        flex-wrap: wrap;
+        margin-bottom: 90px;
+        width: 47.4418605%;
+
+        @media (screen and max-width: 800px) {
+          margin-bottom: 36px;
+          width: 100%;
+        }
+
+        &:nth-of-type(2n) {
+          padding-left: 04.1353383%;
+        }
+
+        a {
+          background: transparent;
+          color: #FF99C6;
+          text-decoration: underline;
+
+          img.sponsor_logo {
+            width: 100%;
+
+            &.ibm {
+              max-width: 258px;
+            }
+          }
+
+          // TODO: add individual sponsor logo classes once figuring cache issue
+        }
+      }
+    }
+  }
+
+  section.camp__support {
+    background-color: #3E2C4B;
+    color: #fff;
+    padding-bottom: 120px;
+
+    @media (screen and max-width: 800px) {
+      padding-bottom: 36px;
+    }
+
+    .camp__wrapper {
+      display: flex;
+      justify-content: center;
+
+      @media (screen and max-width: 800px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    div.camp__support__request {
+      width: 38.3458647%;
+
+      @media (screen and max-width: 800px) {
+        margin-bottom: 36px;
+        width: 80.8270677%;
+      }
+
+      p {
+        padding-bottom: 12px;
+
+        &:nth-of-type(2n) {
+          font-weight: 700;
+        }
+      }
+    }
+
+    div.camp__supporter {
+      padding-left: 04.1353383%;
+      width: 38.3458647%;
+
+      @media (screen and max-width: 800px) {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 42px;
+        padding: 42px 0 0 0;
+        width: 80.8270677%;
+      }
+
+      p {
+        margin-bottom: 36px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          padding: 0 5% 24px 0;
+          box-sizing: border-box;
+          width: 50%;
+
+          @media (screen and max-width: 800px) {
+            margin: auto;
+            text-align: center;
+            width: 80%;
+          }
+
+          a {
+            background: transparent;
+
+            img.support_logo {
+              padding: 30px 0 15px 0;
+              width: 100%;
+
+              &.makemodel {
+
+              }
+
+              &.hoodie {
+                position: relative;
+              }
+
+              &.bocoup {
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    background-color: #443252;
+    color: #fff;
+
+    h4 {
+      color: #fff;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .camp__wrapper {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding-top: 60px;
+
+      @media (screen and max-width: 800px) {
+        padding-top: 12px;
+      }
+    }
+
+    section.tickets {
+      text-align: center;
+      padding-bottom: 120px;
+
+      @media (screen and max-width: 800px) {
+        padding-bottom: 72px;
+      }
+
+      &::before {
+        background: url(/images/camp/ziggy.svg) repeat-x center center transparent;
+        background-size: 33%;
+        content: "";
+        display: block;
+        height: 50px;
+        margin: auto;
+        max-width: 400px;
+        position: relative;
+        top: -25px;
+        width: 100%;
+      }
+
+      span.price {
+        display: block;
+        font-size: 2.250em;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: 90px;
+
+        @media (screen and max-width: 800px) {
+          margin-top: 36px;
+        }
+      }
+
+      p {
+        display: block;
+        font-size: 2.250em;
+        font-weight: 300;
+        line-height: 1.167em;
+        margin: 0 auto 54px;
+        max-width: 560px;
+
+        @media (screen and max-width: 600px) {
+          font-size: 1.500em;
+          padding: 0 30px;
+        }
+      }
+
+      span {
+        display: block;
+        font-weight: 900;
+        margin-top: 36px;
+      }
+
+    }
+
+    section.past__camps {
+      position: relative;
+
+      a {
+        position: relative;
+      }
+    }
+
+    section.newsletter {
+      margin: auto;
+      max-width: 600px;
+      text-align: center;
+
+      input[type=email],
+      input[type=text] {
+        background: none;
+        border: 6px solid #FF99C6;
+        color: #FF99C6;
+        font-size: 1.125em;
+        font-weight: 700;
+        line-height: 3em;
+        text-indent: 20px;
+        width: 60%;
+
+        @media (screen and max-width: 500px) {
+          width: 80%;
+        }
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: rgba(255, 153, 198, 0.5);
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: rgba(255, 153, 198, 0.5);
+        }
+      }
+      input[type=submit] {
+        background: none;
+        border: 6px solid #FFF;
+        color: #FFF;
+        font-size: 1.125em;
+        font-weight: 600;
+        padding: 17px;
+        vertical-align: top;
+
+        @media (screen and max-width: 500px) {
+          margin-top: 6px;
+          width: 80%;
+        }
+
+        &:hover {
+          background: #fff;
+          color: #3E2C4B;
+        }
+      }
+    }
+
+    span.credit {
+      display: block;
+      clear: both;
+      text-align: center;
+      padding-top: 180px;
+      padding-bottom: 48px;
+      width: 100%;
+
+      a {
+        background: transparent;
+        border-bottom: 1px solid rgba(0,255,230,.55);
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Schedule
+
+
+  // Detail pages (CoC, Team, FAQ) == .camp.detail
+  &.detail {
+    section.masthead {
+      background-image: none;
+      padding-bottom: 42px;
+      margin-bottom: 42px;
+
+      header {
+        margin-bottom: 0;
+      }
+    }
+
+    .content {
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul {
+        margin: auto;
+        max-width: 800px;
+        padding-bottom: 12px;
+        padding-top: 24px;
+      }
+
+      p {
+        padding-bottom: 12px;
+        padding-top: 0;
+      }
+
+      ::selection {
+        color: $selectedTextDark;
+        background: $selectedDarkBG;
+      }
+
+      ul.plain-list {
+        margin: 20px auto;
+
+        li {
+          display: inline-flex;
+          font-size: 1.500em;
+          font-weight: 900;
+          margin-bottom: 12px;
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            background-color: #FF99C6;
+            border-radius: 10px;
+            content: "";
+            height: 10px;
+            position: absolute;
+            left: 0px;
+            top: 40%;
+            width: 10px;
+          }
+        }
+      }
+      ul.profiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 800px;
+        padding-top: 24px;
+
+        li {
+          margin-bottom: 36px;
+          width: 30%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}

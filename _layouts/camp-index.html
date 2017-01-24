@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<!--
-
-If you're offline and you know it clap your hands!
-
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=yes">
-  <!-- This meta tag below tells YouTube account that we own this website. Don't delete it!-->
-  <meta name="google-site-verification" content="pN2SW1gz0JFaND5PxYqDzKNcR1sjGHFvrdEQqEdDyyw" />
   <title>{{ page.title }}</title>
   <link rel="shortcut icon" href="{{ page.root_path }}favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="{{ page.root_path }}css/normalize.css">
-  <link rel="stylesheet" href="{{ page.root_path }}css/styles.css">
+  <link rel="stylesheet" href="{{ page.root_path }}css/camp.css">
   <link rel="apple-touch-icon" href="{{ page.root_path }}images/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="57x57" href="{{ page.root_path }}images/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="{{ page.root_path }}images/apple-touch-icon-60x60.png" />
@@ -23,7 +15,7 @@ If you're offline and you know it clap your hands!
   <link rel="apple-touch-icon" sizes="120x120" href="{{ page.root_path }}images/apple-touch-icon-120x120.png" />
   <link rel="apple-touch-icon" sizes="144x144" href="{{ page.root_path }}images/apple-touch-icon-144x144.png" />
   <link rel="apple-touch-icon" sizes="152x152" href="{{ page.root_path }}images/apple-touch-icon-152x152.png" />
-  <link rel="alternate" type="application/rss+xml" href="http://us4.campaign-archive2.com/feed?u=12d36bbe9418ed6a43127cd62&id=7fc00bfaef">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
   <script>
         (function(){
@@ -41,7 +33,7 @@ If you're offline and you know it clap your hands!
                 } else {
                     // We have to first load the font file asynchronously
                     var request = new XMLHttpRequest();
-                    request.open('GET', './css/fonts.css', true);
+                    request.open('GET', '{{ page.root_path }}css/fonts.css', true);
 
                     request.onload = function() {
                         if (request.status >= 200 && request.status < 400) {
@@ -62,28 +54,36 @@ If you're offline and you know it clap your hands!
         }());
       </script>
 </head>
-<body class="home">
+<body class="camp">
   <div class="container">
-    <header role="banner">
-      <h1>
-        <a href="{{ page.root_path }}" title="Go to homepage">Offline First</a>
-      </h1>
-
-      <nav role="navigation">
-        <ul>
-          <li{% if page.tab == 'events' %} class="active"{% endif %}><a href="{{ page.root_path }}events/">Events</a></li>
-          <li{% if page.tab == 'news' %} class="active"{% endif %}><a href="{{ page.root_path }}news/">News</a></li>
-          <li{% if page.tab == 'connect' %} class="active"{% endif %}><a href="{{ page.root_path }}connect/">Connect</a></li>
-          <li{% if page.tab == 'casestudies' %} class="active"{% endif %}><a href="{{ page.root_path }}casestudies/">Case Studies</a></li>
-          <li><a href="{{ page.root_path }}camp/">Camp</a></li>
+    <section class="masthead">
+      <div class="camp__wrapper">
+        <header>
+          <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
+          <nav>
+            <ul>
+              <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
+              <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/faq.html">FAQ</a></li>
+              <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/team.html">Team</a></li>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Code</a></li>
+              <li><a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend pink">Apply</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1>A 4-day retreat to explore Offline First development and design</h1>
+        <ul class="glance-details">
+          <li>30 Campers</li>
+          <li>Apr 28 &ndash; May 1, 2017</li>
+          <li>Berlin, Germany</li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-    <div class="content" role="main" aria-label="Content">
+    <div class="content">
       {{ content }}
     </div>
   </div>
+
   <script type="text/javascript">
     var _gauges = _gauges || [];
     (function() {

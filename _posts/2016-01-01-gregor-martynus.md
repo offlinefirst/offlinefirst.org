@@ -3,6 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Gregor Martynus
+location: berlin
 twitter:  gr2m
 website:  http://hood.ie
 bio:      Unsatisfied with the status quo. Community Manager at Hoodie.

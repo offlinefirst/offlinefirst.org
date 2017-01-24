@@ -1,0 +1,21 @@
+---
+layout:     camp-detail
+title:      Offline Camp Team
+tab:        team
+root_path:  ../
+---
+<div class="camp__wrapper">
+   <h1>The Offline Camp Team</h1>
+    <ul class="profiles">
+      {% for post in site.posts %}
+      {% if post.type == 'team' and post.location == 'berlin' %}
+      <li>
+        <a href="{{ post.url }}">
+          <img src="{{ post.avatar }}" alt="" class="full_image">
+        </a>
+        <h2>{{ post.name }}</h2> <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>{{ page.title }}</title>
+  <link rel="shortcut icon" href="{{ page.root_path }}favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ page.root_path }}css/normalize.css">
+  <link rel="stylesheet" href="{{ page.root_path }}css/camp.css">
+  <link rel="apple-touch-icon" href="{{ page.root_path }}images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ page.root_path }}images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ page.root_path }}images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ page.root_path }}images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ page.root_path }}images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ page.root_path }}images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ page.root_path }}images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ page.root_path }}images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ page.root_path }}images/apple-touch-icon-152x152.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '{{ page.root_path }}css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="camp detail">
+  <div class="container">
+    <section class="masthead">
+      <div class="camp__wrapper">
+        <header>
+          <a href="{{ page.root_path }}camp/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
+          <nav>
+            <ul>
+              <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/schedule.html">Schedule</a></li>
+              <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/faq.html">FAQ</a></li>
+              <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/team.html">Team</a></li>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Code</a></li>
+              <li><a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend pink">Apply</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </section>
+
+    <div class="content">
+      {{ content }}
+    </div>
+    <section class="attend__strip">
+      <span class="price">€350 + VAT</span>
+      <a href="#" class="attend">Apply</a>
+      <p>A limited number of Super Early Bird tickets are available until Feburary 10. (Save €250 while supplies last!) <span>Includes food and lodging.</span></p>
+    </section>
+
+    <section class="camp__sponsors">
+      <div class="camp__wrapper">
+        <h4>Sponsors</h4>
+        <ul>
+          {% for post in site.posts %}
+          {% if post.type == 'sponsor' and post.location == 'berlin'  %}
+          <li>
+            <a href="{{ post.site }}">
+              <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+            </a>
+            {{ post }}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="camp__support">
+      <div class="camp__wrapper">
+        <div class="camp__support__request">
+          <p>Gathering the community for a focused conversation about Offline First is a tremendous way to advance offline tooling, design patterns, and visibility of these challenges in the tech community.</p>
+          <p>We would love to have your help.</p>
+          <a href="#" class="sponsor pink">Sponsor</a>
+        </div>
+        <div class="camp__supporter">
+          <p>A huge thank you for the logistics and systems support from our event partners.</p>
+          <ul>
+            {% for post in site.posts %}
+            {% if post.type == 'support' and post.location == 'berlin' %}
+            <li>
+              <a href="{{ post.site }}">
+                <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <section class="tickets">
+        <span class="price">€350 + VAT</span>
+        <p>A limited number of Super Early Bird tickets are available until Feburary 10. (Save €250 while supplies last!)</p>
+        <a href="#" class="attend pink">Apply</a>
+        <span>Includes food and lodging.</span>
+      </section>
+
+      <div class="camp__wrapper">
+        <!-- <section class="past__camps l-col">
+          <h4>Past Camps</h4>
+          <a href="#">New York 2016</a>
+        </section> -->
+
+        <section class="newsletter">
+          <h4>Sign up for offlinefirst.org updates</h4>
+
+          <!-- TODO: include mailchimp form -->
+          <div class="newsletter" id="mc_embed_signup">
+            <form action="http://hood.us4.list-manage.com/subscribe/post?u=12d36bbe9418ed6a43127cd62&amp;id=7fc00bfaef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+              <input type="email" title="Email" name="EMAIL" id="input-email" required="" placeholder="ilove@emails.com">
+              <input type="submit" value="Subscribe" title="Submit">
+            </form>
+          </div>
+        </section>
+
+        <span class="credit">
+          Designed by <a href="http://www.makemodel.co">Make&amp;Model</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+</body>
+</html>

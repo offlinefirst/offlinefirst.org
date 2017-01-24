@@ -1,54 +1,30 @@
 ---
-layout:     camp
+layout:     camp-detail
 title:      Offline Camp Code of Conduct
+tab:        coc
 root_path:  ../
 ---
+<div class="camp__wrapper">
 
-<header>
-  <h6>
-    <span class="month">November</span>
-    <span class="day">4-7<sup>th</sup></span>
-    <span class="year">2016</span>
-  </h6>
-
-  <p class="location">
-    <a href="https://goo.gl/maps/r4xFZGZ6kr12">Santa Margarita, California</a><br>
-    30 Campers
-  </p>
-
-  <hr>
-
- 
-
-  <p class="price">
-    <small>
-      Registration has closed.
-    </small>
-  </p>
-
-</header>
-
-<div class="main">
-   <h2>The Offline Camp Code of Conduct</h2>
+  <h1>The Offline Camp Code of Conduct</h1>
 
   <p>
-    All attendees, speakers, sponsors, partners and volunteers at our camp are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
+    All attendees, speakers, sponsors, partners and volunteers at our camp are required to adhere to the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
   </p>
 
-  <h3>Policy for Enforcing this Code of Conduct</h3>
+  <h2>Policy for Enforcing this Code of Conduct</h2>
 
   <p>
-    We are dedicated to providing a safe and comfortable space for all Offline Campers. If you are being harassed, notice that someone else is being harassed, or have any other questions and/or concerns, please tell an organiser immediately. You can contact
-    the camp organizing team by <a href="mailto:camp@offlinefirst.org?subject=Code+of+Conduct+Help">email</a>, call Gregor directly at +1 (781) 363-4625, or talk directly to any <a href="#camp-organiser">camp organiser</a>. You will be able to identify camp organizers at camp because we will introduce ourselves at the beginning AND we will be wearing "camp counselor" badges.
+    We are dedicated to providing a safe and comfortable space for all Offline Campers. If you are being harassed, notice that someone else is being harassed, or have any other questions and/or concerns, please tell an organiser immediately. You can contact the camp organizing team by <a href="mailto:camp@offlinefirst.org?subject=Code+of+Conduct+Help">email</a>, call Gregor directly at +49 157 73845984, or talk directly to any <a href="#camp-organiser">camp organiser</a>. You will be able to identify camp organizers at camp because we will introduce ourselves at the beginning AND we will be wearing "camp counselor" badges.
   </p>
 
-  <h3>The Quick Version</h3>
+  <h2>The Quick Version</h2>
 
   <p>
     Our camp is dedicated to providing a harassment-free camp experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of camp participants in any form. Sexual language and imagery is not appropriate for any camp venue, including talks, workshops, parties, Twitter and other online media. Unacceptable behavior from any camper, including sponsors and organisers with decision-making authority, will not be tolerated. Anyone asked to stop unacceptable behavior is expected to comply immediately. If a camper engages in unnacceptable behavior, the organisers reserve the right to respond with any action the community deems appropriate, up to and including ejection from camp <em>without warning and without refund</em>.
   </p>
 
-  <h3>The Less Quick Version</h3>
+  <h2>The Less Quick Version</h2>
 
   <p>
     Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
@@ -82,27 +58,3 @@ root_path:  ../
     We expect participants to follow these rules at all camp and workshop venues and camp-related social events.
   </p>
 </div>
-
-  <div class="profiles">
-    <h2><a name="camp-organiser">The Offline Camp Organizers</a></h2>
-    <ul>
-      {% for post in site.posts %}
-      {% if post.type == 'team' %}
-      <li>
-        <a href="{{ post.url }}">
-          <img src="{{ post.avatar }}" alt="" class="full_image">
-        </a>
-        {{ post.name }} <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-
-  <div class="apply">
-    <span class="date">November 4-7, 2016</span><br>
-    <span class="price">$600</span><br>
-    
-  </div>
-  <div class="clear"></div>
