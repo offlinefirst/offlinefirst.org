@@ -500,6 +500,10 @@ $linkBG: rgba(62,19,96,.05);
 
         &:nth-of-type(2n) {
           padding-left: 04.1353383%;
+
+          @media (screen and max-width: 800px) {
+            padding-left: 0;
+          }
         }
 
         a {
@@ -512,6 +516,10 @@ $linkBG: rgba(62,19,96,.05);
 
             &.ibm {
               max-width: 258px;
+            }
+
+            &.google {
+              max-width: 358px;
             }
           }
 
