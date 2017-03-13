@@ -185,6 +185,7 @@ $linkBG: rgba(62,19,96,.05);
           width: 100%;
 
           li {
+            align-items: center;
             display: inline-flex;
             width: 100%;
 
@@ -193,7 +194,7 @@ $linkBG: rgba(62,19,96,.05);
               color: #FFFFFF;
               font-size: 1.125em;
               font-weight: 600;
-              line-height: 2.000em;
+              line-height: 1.500em;
               padding: 5%;
               text-align: center;
               text-decoration: none;
@@ -428,7 +429,7 @@ $linkBG: rgba(62,19,96,.05);
 
     p {
       display: inline-block;
-      font-size: 2.250em;
+      font-size: 1.5em;
       font-weight: 300;
       line-height: 1.167em;
       max-width: 560px;
@@ -469,28 +470,35 @@ $linkBG: rgba(62,19,96,.05);
     color: #fff;
 
     .camp__wrapper {
-      padding-top: 90px;
+      padding-bottom: 54px;
+
+      &:first-child {
+        padding-top: 90px;
+      }
     }
 
     h4 {
-      margin: 0 auto 72px;
+      font-size: 1.875em;
+      margin: 0 auto 36px;
+      text-align: center;
       width: 80.8270677%;
     }
 
     ul {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       margin-bottom: 0;
       margin: auto;
       width: 80.8270677%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 48px;
 
-      @media (screen and max-width: 800px) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      }
 
       li {
         flex-wrap: wrap;
-        margin-bottom: 90px;
+        text-align: center;
+        margin-bottom: 36px;
         width: 47.4418605%;
 
         @media (screen and max-width: 800px) {
@@ -505,25 +513,43 @@ $linkBG: rgba(62,19,96,.05);
             padding-left: 0;
           }
         }
+      }
+    }
 
-        a {
-          background: transparent;
-          color: #FF99C6;
-          text-decoration: underline;
+    .camp__wrapper {
+      a {
+        background: transparent;
+        color: #FF99C6;
+        text-decoration: underline;
 
-          img.sponsor_logo {
+        img.sponsor_logo {
+          width: 100%;
+        }
+      }
+
+      &.foundational {
+        img {
+          max-width: 300px;
+        }
+      }
+
+      &.room {
+        img {
+          max-width: 350px;
+        }
+      }
+
+      &.supporting {
+        li {
+          width: 25%;
+
+          @media (screen and max-width: 800px) {
+            margin-bottom: 36px;
             width: 100%;
-
-            &.ibm {
-              max-width: 258px;
-            }
-
-            &.google {
-              max-width: 358px;
-            }
           }
-
-          // TODO: add individual sponsor logo classes once figuring cache issue
+        }
+        img {
+          max-width: 200px;
         }
       }
     }

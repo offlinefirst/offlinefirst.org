@@ -79,17 +79,49 @@
     <section class="attend__strip">
       <span class="price">€550 + VAT</span>
       <a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend">Join Waitlist</a>
-      <p>Although we're currently sold out, we <em>highly</em> encourage you to get on our waitlist in case another ticket 
-    opens up. Especially if you identify as a member of a group typically underrepresented at tech events! (See our  
+      <p>Although we're currently sold out, we <em>highly</em> encourage you to get on our waitlist in case another ticket
+    opens up. Especially if you identify as a member of a group typically underrepresented at tech events! (See our
     <a href="{{ page.root_path }}camp/faq.html#diversity" style="color:#FF99C6">Diversity Statement</a>.)<span>Includes food and lodging.</span></p>
     </section>
 
     <section class="camp__sponsors">
-      <div class="camp__wrapper">
-        <h4>Sponsors</h4>
+      <div class="camp__wrapper foundational">
+        <h4>Foundational Sponsor</h4>
         <ul>
           {% for post in site.posts %}
-          {% if post.type == 'sponsor' and post.location == 'berlin'  %}
+          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'foundational'  %}
+          <li>
+            <a href="{{ post.site }}">
+              <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+            </a>
+            {{post.content}}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="camp__wrapper room">
+        <h4>Room Sponsors</h4>
+        <ul>
+          {% for post in site.posts %}
+          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'room' %}
+          <li>
+            <a href="{{ post.site }}">
+              <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+            </a>
+            {{post.content}}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="camp__wrapper supporting">
+        <h4>Supporting sponsors</h4>
+        <ul>
+          {% for post in site.posts %}
+          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'supporting' %}
           <li>
             <a href="{{ post.site }}">
               <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -113,7 +145,7 @@
           <p>A huge thank you for the logistics and systems support from our event partners.</p>
           <ul>
             {% for post in site.posts %}
-            {% if post.type == 'support' and post.location == 'berlin' %}
+            {% if post.type == 'support' and post.location == 'berlin'%}
             <li>
               <a href="{{ post.site }}">
                 <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
@@ -129,8 +161,8 @@
     <footer>
       <section class="tickets">
         <span class="price">€550 + VAT</span>
-        <p>Although we're currently sold out, we <em>highly</em> encourage you to get on our waitlist in case another ticket 
-    opens up. Especially if you identify as a member of a group typically underrepresented at tech events! (See our  
+        <p>Although we're currently sold out, we <em>highly</em> encourage you to get on our waitlist in case another ticket
+    opens up. Especially if you identify as a member of a group typically underrepresented at tech events! (See our
     <a href="{{ page.root_path }}camp/faq.html#diversity" style="color:#FF99C6">Diversity Statement</a>.)</p>
         <a href="https://offlinecamp.typeform.com/to/Tohygh" class="attend pink">Join Waitlist</a>
         <span>Includes food and lodging.</span>

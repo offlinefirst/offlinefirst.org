@@ -47,11 +47,43 @@ root_path:  ../
 </section>
 
 <section class="camp__sponsors">
-  <div class="camp__wrapper">
-    <h4>Sponsors</h4>
+  <div class="camp__wrapper foundational">
+    <h4>Foundational Sponsor</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'berlin'  %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'foundational'  %}
+      <li>
+        <a href="{{ post.site }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{post.content}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="camp__wrapper room">
+    <h4>Room Sponsors</h4>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'room' %}
+      <li>
+        <a href="{{ post.site }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{post.content}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="camp__wrapper supporting">
+    <h4>Supporting sponsors</h4>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'supporting' %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
