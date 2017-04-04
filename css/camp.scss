@@ -184,10 +184,28 @@ $linkBG: rgba(62,19,96,.05);
           perspective: 500px;
           width: 100%;
 
+          @media (screen and max-width: 660px) {
+            flex-wrap: wrap;
+          }
+
           li {
             align-items: center;
             display: inline-flex;
-            width: 100%;
+            width: 40%;
+
+            &:nth-child(5) {
+              width: 100%;
+            }
+
+            @media (screen and max-width: 660px) {
+              width: 25%;
+
+              &:nth-child(5) {
+                clear: both;
+                margin: 30px auto 5px;
+                width: 50%;
+              }
+            }
 
             a {
               background: transparent;
