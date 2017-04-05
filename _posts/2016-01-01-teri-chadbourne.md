@@ -4,7 +4,7 @@ root_path: ../../
 type:     team
 name:     Teri Chadbourne
 location: berlin
-twitter:  eventteri
+twitter:  EventTeri
 avatar:   /images/team/teri.jpg
 ---
 
