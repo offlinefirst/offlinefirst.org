@@ -176,6 +176,7 @@ $linkBG: rgba(62,19,96,.05);
 
         @media (screen and max-width: 800px) {
           width: 100%;
+          float: none;
         }
 
         ul {
@@ -827,6 +828,10 @@ $linkBG: rgba(62,19,96,.05);
       background-image: none;
       padding-bottom: 42px;
       margin-bottom: 42px;
+
+      @media (screen and max-width: 800px) {
+        padding-bottom: 0;
+      }
 
       header {
         margin-bottom: 0;
