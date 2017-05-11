@@ -1,5 +1,101 @@
 ---
 layout:     default
-title:      Comparison of Offline Sync Protocols
+title:      Comparison of Offline Sync Protocols and Implementations
 root_path:  ../
 ---
+
+<div class="main">
+
+  <h1>A Comparison of Offline Sync Protocols and Implementations</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sync Protocol or Implementation</th>
+        <th>Conflict Resolution Strategies</th>
+        <th>Client Implementations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="http://docs.couchdb.org/en/2.0.0/replication/protocol.html">CouchDB Replication Protocol</a></td>
+        <td>
+          <ul>
+            <li>deterministically-chosen winner<sup id="footnote-1-ref"><a href="#footnote-1">[1]</a></sup></li>
+            <li>developer-supplied strategy (selecting from a revision tree of conflicts)<sup id="footnote-2-ref"><a href="#footnote-2">[2]</a></sup></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="https://pouchdb.com/">PouchDB</a></li>
+            <li><a href="https://www.ibm.com/analytics/us/en/technology/offline-first/">Cloudant Mobile Sync</a> (iOS, Android)</li>
+            <li><a href="https://www.couchbase.com/nosql-databases/couchbase-mobile">Couchbase Mobile</a> (iOS, Android, Java, .NET, Xamarin, PhoneGap)<sup id="footnote-3-ref"><a href="#footnote-3">[3]</a></sup></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://realm.io/products/realm-mobile-platform/">Realm Sync Engine</a></td>
+        <td>
+          <ul>
+            <li>last write wins (when updating or deleting objects)<sup id="footnote-4-ref"><a href="#footnote-4">[4]</a></sup></li>
+            <li>appending items (when inserting into a list)<sup id="footnote-5-ref"><a href="#footnote-5">[5]</a></sup></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="https://realm.io/docs/javascript/latest/">Realm JavaScript (React Native, Node.js)</a></li>
+            <li><a href="https://realm.io/docs/objc/latest/">Realm Objective‑C (iOS)</a></li>
+            <li><a href="https://realm.io/docs/swift/latest/">Realm Swift (iOS)</a></li>
+            <li><a href="https://realm.io/docs/java/latest/">Realm Java (Android)</a></li>
+            <li><a href="https://realm.io/docs/xamarin/latest/">Realm Xamarin (.NET)</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://firebase.google.com/products/database/">Firebase Realtime Database</a<</td>
+        <td>
+          <ul>
+            <li>last write wins (when using <code>set()</code> or <code>update()</code>)<sup id="footnote-6-ref"><a href="#footnote-6">[6]</a></sup></li>
+            <li>appending items (when using <code>push()</code>)<sup id="footnote-7-ref"><a href="#footnote-7">[7]</a></sup></li>
+            <li>developer-supplied strategy (when using <code>transaction()</code>)<sup id="footnote-8-ref"><a href="#footnote-8">[8]</a></sup></li>
+          <ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="https://firebase.google.com/docs/web/setup">Firebase SDK: JavaScript</a></li>
+            <li><a href="https://firebase.google.com/docs/ios/setup">Firebase SDK: iOS</a></li>
+            <li><a href="https://firebase.google.com/docs/android/setup">Firebase SDK: Android</a></li>
+            <li><a href="https://firebase.google.com/docs/cpp/setup">Firebase SDK: C++</a></li>
+            <li><a href="https://firebase.google.com/docs/server/setup">Firebase SDK: Server (Node.js, Java, Python)</a></li>
+            <li><a href="https://firebase.google.com/docs/unity/setup">Firebase SDK: Unity</a></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p id="footnote-1">
+    1. Apache CouchDB implementations use a deterministic algorithm to choose a "winning" document. See: <a href="http://docs.couchdb.org/en/2.0.0/replication/conflicts.html#working-with-conflicting-documents">Working with conflicting documents</a>. <a href="#footnote-1-ref">↩</a> 
+  </p>
+  <p id="footnote-2">
+    2. Apache CouchDB implementations will maintain a revision tree of conflicted documents, allowing for the selection of a "winning" document or the merging of document data using application logic. See: <a href="http://docs.couchdb.org/en/2.0.0/replication/conflicts.html#working-with-conflicting-documents">Working with conflicting documents</a>. <a href="#footnote-2-ref">↩</a> 
+  </p>
+  <p id="footnote-3">
+    3. <a href="https://groups.google.com/d/msg/mobile-couchbase/yrfhLg4adFc/VmNuwnWsAAAJ">Couchbase Mobile 2.0 will <em>not</em> be compatible with the CouchDB Replication Protocol</a>. <a href="#footnote-3-ref">↩</a> 
+  </p>
+  <p id="footnote-4">
+    4. <a href="https://realm.io/docs/realm-object-server/#conflict-resolution">See the Realm Objective Server documentation on conflict resolution.</a> <a href="#footnote-4-ref">↩</a> 
+  </p>
+  <p id="footnote-5">
+    5. <a href="https://realm.io/docs/realm-object-server/#conflict-resolution">See the Realm Objective Server documentation on conflict resolution.</a> <a href="#footnote-5-ref">↩</a> 
+  </p>
+  <p id="footnote-6">
+    6. <a href="https://www.firebase.com/docs/web/guide/saving-data.html">See the Firebase documentation on saving data.</a> <a href="#footnote-6-ref">↩</a> 
+  </p>
+  <p id="footnote-7">
+    7. <a href="https://www.firebase.com/docs/web/guide/saving-data.html">See the Firebase documentation on saving data.</a> <a href="#footnote-7-ref">↩</a> 
+  </p>
+  <p id="footnote-8">
+    8. Transactions in Firebase can be slow and complex as they require one or more round trips to the server. <a href="https://www.firebase.com/docs/web/guide/saving-data.html">See the Firebase documentation on saving data.</a> <a href="#footnote-8-ref">↩</a> 
+  </p>
+</div>
