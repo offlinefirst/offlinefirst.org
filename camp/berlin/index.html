@@ -1,0 +1,149 @@
+---
+layout:     berlin/camp-index
+title:      Offline Camp
+root_path:  ../../
+---
+
+<section class="event__description">
+  <div class="camp__wrapper">
+    <div class="l-col">
+      <img src="{{ page.root_path }}images/camp/germany-map.png" alt="" class="event__depiction">
+    </div>
+    <div class="r-col">
+      <h2>
+        We're gathering the Offline First community for a weekend of collaboration at a mansion <strong>outside of Berlin.</strong>
+      </h2>
+      <p>(Yes, we said mansion.) </p>
+      <p>We’re developers interested in making our apps work without constant internet connection. We’re designers exploring UX patterns that maintain user understanding of system state. We are all working on problems that very few have explored before, and we know it will take a wide range of viewpoints to solve the big challenges ahead of us. </p>
+      <p>Offline Camp is an open, participatory event. Please bring your perspective on Offline First and be willing to share — and listen!</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+
+<section class="event__description__details">
+  <div class="camp__wrapper">
+    <div class="event__description__detail">
+      <h3>Compelling issues.</h3>
+      <p>Offline Camp is an opportunity to explore the entire spectrum of <a href="{{ page.root_path }}">Offline First</a>, including Progressive Web Apps, mobile apps (native and hybrid), desktop apps (e.g. Electron), Internet of Things (IoT) apps, the business case for Offline First, and the UX of Offline First. </p>
+    </div>
+    <div class="event__description__detail">
+      <h3>Communal living.</h3>
+      <p>Offline Camp will take place at Schloss Blankensee, a gorgeous baroque mansion set amongst idyllic gardens in Trebbin, Germany, just outside of Berlin. While we'll share our living space, there will be enough room to roam, relax, find solitude, and, of course, to collaborate.</p>
+    </div>
+    <div class="event__description__detail">
+      <h3>A caring community.</h3>
+      <p>All attendees, speakers, sponsors, and volunteers at Offline Camp are required to adhere to our <a href="{{ page.root_path }}camp/codeofconduct.html">Code of Conduct</a>. If you have any questions or suggestions on how we can make Offline Camp more safe and inclusive for all campers, please let us know.</p>
+    </div>
+  </div>
+</section>
+
+<section class="attend__strip">
+  <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend">Join a Future Camp</a>
+  <p>Offline Camp Berlin is sold out, but we'd love to see you at our next event! Share your contact details and
+  we'll let you know when the next camp location is announced.</p>
+</section>
+
+<section class="camp__sponsors">
+  <div class="camp__wrapper foundational">
+    <h4>Foundational Sponsor</h4>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'foundational'  %}
+      <li>
+        <a href="{{ post.site }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{post.content}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="camp__wrapper room">
+    <h4>Room Sponsors</h4>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'room' %}
+      <li>
+        <a href="{{ post.site }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{post.content}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="camp__wrapper supporting">
+    <h4>Supporting sponsors</h4>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'supporting' %}
+      <li>
+        <a href="{{ post.site }}">
+          <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
+        </a>
+        {{post.content}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="camp__support">
+  <div class="camp__wrapper">
+    <div class="camp__support__request">
+      <p>Gathering the community for a focused conversation about Offline First is a tremendous way to advance offline tooling, design patterns, and visibility of these challenges in the tech community.</p>
+      <p>We would love to have your help.</p>
+      <a href="#" class="sponsor pink">Sponsor</a>
+    </div>
+    <div class="camp__supporter">
+      <p>A huge thank you for the logistics and systems support from our event partners.</p>
+      <ul>
+        {% for post in site.posts %}
+        {% if post.type == 'support' and post.location == 'berlin' %}
+        <li>
+          <a href="{{ post.site }}">
+            <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <section class="tickets">
+  <p>Offline Camp Berlin is sold out, but we'd love to see you at our next event! Share your contact details and
+  we'll let you know when the next camp location is announced.</p>
+    <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a>
+  </section>
+
+  <div class="camp__wrapper">
+    <!-- <section class="past__camps l-col">
+      <h4>Past Camps</h4>
+      <a href="#">New York 2016</a>
+    </section> -->
+
+    <section class="newsletter">
+      <h4>Sign up for Offline First news.</h4>
+      <!-- TODO: include mailchimp form -->
+      <div class="newsletter" id="mc_embed_signup">
+        <form action="http://hood.us4.list-manage.com/subscribe/post?u=12d36bbe9418ed6a43127cd62&amp;id=7fc00bfaef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+          <input type="email" title="Email" name="EMAIL" id="input-email" required="" placeholder="ilove@emails.com">
+          <input type="submit" value="Subscribe" title="Submit">
+        </form>
+      </div>
+    </section>
+
+    <span class="credit">
+      Designed by <a href="http://www.makemodel.co">Make&amp;Model</a>
+    </span>
+  </div>
+</footer>

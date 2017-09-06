@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>{{ page.title }}</title>
+  <link rel="shortcut icon" href="{{ page.root_path }}favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ page.root_path }}css/normalize.css">
+  <link rel="stylesheet" href="{{ page.root_path }}css/berlin/camp.css">
+  <link rel="apple-touch-icon" href="{{ page.root_path }}images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ page.root_path }}images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ page.root_path }}images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ page.root_path }}images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ page.root_path }}images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ page.root_path }}images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ page.root_path }}images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ page.root_path }}images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ page.root_path }}images/apple-touch-icon-152x152.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+  <script>
+        (function(){
+            function addFont() {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                document.head.appendChild(style);
+                style.textContent = localStorage.firaSansWeb;
+            }
+
+            try {
+                if (localStorage.firaSansWeb) {
+                    // The font is in localStorage, we can load it directly
+                    addFont();
+                } else {
+                    // We have to first load the font file asynchronously
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '{{ page.root_path }}css/fonts.css', true);
+
+                    request.onload = function() {
+                        if (request.status >= 200 && request.status < 400) {
+                            // We save the file in localStorage
+                            localStorage.firaSansWeb = request.responseText;
+
+                            // ... and load the font
+                            addFont();
+                        }
+                    };
+
+                    request.send();
+                }
+            } catch(ex) {
+                // maybe load the font synchronously for woff-capable browsers
+                // to avoid blinking on every request when localStorage is not available
+            }
+        }());
+      </script>
+</head>
+<body class="camp">
+  <div class="container">
+    <section class="masthead">
+      <div class="camp__wrapper">
+        <header>
+          <a href="{{ page.root_path }}camp/berlin/index.html" title="Go to Offline Camp" class="logo">Offline Camp</a>
+          <nav>
+            <ul>
+              <li{% if page.tab == 'schedule' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/berlin/schedule.html">Schedule</a></li>
+              <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/berlin/faq.html">FAQ</a></li>
+              <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/berlin/team.html">Team</a></li>
+              <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/berlin/codeofconduct.html">Code</a></li>
+              <li><a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1>A 4-day retreat to explore Offline First development and design</h1>
+        <ul class="glance-details">
+          <li>30 Campers</li>
+          <li>Apr 28 &ndash; May 1, 2017</li>
+          <li>Berlin, Germany</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '5277cdb6613f5d38f6000069');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+</body>
+</html>
