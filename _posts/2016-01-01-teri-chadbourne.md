@@ -3,7 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Teri Chadbourne
-location: berlin
+location: oregon
 twitter:  EventTeri
 avatar:   /images/team/teri.jpg
 ---
