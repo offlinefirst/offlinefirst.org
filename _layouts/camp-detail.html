@@ -66,7 +66,7 @@
               <li{% if page.tab == 'faq' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/faq.html">FAQ</a></li>
               <li{% if page.tab == 'team' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/team.html">Team</a></li>
               <li{% if page.tab == 'coc' %} class="active"{% endif %}><a href="{{ page.root_path }}camp/codeofconduct.html">Code</a></li>
-              <li><a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a></li>
+              <li><a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Apply Now</a></li>
             </ul>
           </nav>
         </header>
@@ -77,9 +77,8 @@
       {{ content }}
     </div>
     <section class="attend__strip">
-    <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend">Join a Future Camp</a>
-    <p>Offline Camp Berlin is sold out, but we'd love to see you at our next event! Share your contact details and 
-    we'll let you know when the next camp location is announced.</p>
+    <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend">Apply Now</a>
+    <p>Apply by DATE to receive the Early Bird rate of $XXX (food and lodging included).</p>
     </section>
 
 
@@ -88,7 +87,7 @@
         <h4>Foundational Sponsor</h4>
         <ul>
           {% for post in site.posts %}
-          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'foundational'  %}
+          {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'foundational'  %}
           <li>
             <a href="{{ post.site }}">
               <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -104,7 +103,7 @@
         <h4>Room Sponsors</h4>
         <ul>
           {% for post in site.posts %}
-          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'room' %}
+          {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'room' %}
           <li>
             <a href="{{ post.site }}">
               <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -120,7 +119,7 @@
         <h4>Supporting sponsors</h4>
         <ul>
           {% for post in site.posts %}
-          {% if post.type == 'sponsor' and post.location == 'berlin' and post.sponsor_type == 'supporting' %}
+          {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'supporting' %}
           <li>
             <a href="{{ post.site }}">
               <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -144,7 +143,7 @@
           <p>A huge thank you for the logistics and systems support from our event partners.</p>
           <ul>
             {% for post in site.posts %}
-            {% if post.type == 'support' and post.location == 'berlin'%}
+            {% if post.type == 'support' and post.location == 'oregon'%}
             <li>
               <a href="{{ post.site }}">
                 <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
@@ -159,9 +158,8 @@
 
     <footer>
       <section class="tickets">
-        <p>Offline Camp Berlin is sold out, but we'd love to see you at our next event! Share your contact details and 
-        we'll let you know when the next camp location is announced.</p>    
-        <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a>
+        <p>Apply by DATE to receive the Early Bird rate of $XXX (food and lodging included).</p>    
+        <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Apply Now</a>
       </section>
 
 
