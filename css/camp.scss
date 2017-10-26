@@ -261,6 +261,7 @@ $linkBG: rgba(62,19,96,.05);
 
     ul.glance-details {
       width: 100%;
+      margin-bottom: 54px;
 
       li {
         display: inline-flex;
@@ -305,6 +306,10 @@ $linkBG: rgba(62,19,96,.05);
           }
         }
       }
+    }
+
+    iframe {
+      max-width: 100%;
     }
   }
 
