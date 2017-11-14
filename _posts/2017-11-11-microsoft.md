@@ -10,4 +10,4 @@ site:     https://www.microsoft.com/
 logo:     /images/camp/Microsoft_Edge_logo.svg
 ---
 
-We're proud to have the tremendous support of our room sponsor, [Microsoft](https://www.microsoft.com/).
+We're proud to have the tremendous support of our room sponsor, [Microsoft Edge](https://www.microsoft.com/).
