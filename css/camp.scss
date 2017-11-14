@@ -560,6 +560,10 @@ $linkBG: rgba(62,19,96,.05);
       &.room {
         img {
           max-width: 350px;
+
+          &.microsoft {
+            max-width: 150px;
+          }
         }
       }
 

@@ -7,5 +7,7 @@ location: oregon
 name:     Microsoft
 class:    microsoft
 site:     https://www.microsoft.com/
-logo:     /images/camp/google-cloud-platform.svg
+logo:     /images/camp/Microsoft_Edge_logo.svg
 ---
+
+We're proud to have the tremendous support of our room sponsor, [Microsoft](https://www.microsoft.com/).

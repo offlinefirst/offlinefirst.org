@@ -99,9 +99,8 @@
         </ul>
       </div>
 
-  {% comment %}
       <div class="camp__wrapper room">
-        <h4>Room Sponsors</h4>
+        <h4>Room Sponsor</h4>
         <ul>
           {% for post in site.posts %}
           {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'room' %}
@@ -116,6 +115,7 @@
         </ul>
       </div>
 
+    {% comment %}
       <div class="camp__wrapper supporting">
         <h4>Supporting sponsors</h4>
         <ul>
