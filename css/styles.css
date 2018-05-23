@@ -171,11 +171,11 @@ div.clear{
 }
 
 .newsletter {
-  padding: 0 20px;
+  padding: 30px 20px;
   border-bottom: 1px solid #B0CEC9;
 
   background: #E5F7F4;
-  font-size: 18px;
+  font-size: 24px;
   overflow: hidden;
 }
 
@@ -198,7 +198,7 @@ div.clear{
   margin: 0 10px;
 }
 
-.newsletter button {
+.newsletter .button {
   border: none;
   background: #5EC1B4;
 }
