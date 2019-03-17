@@ -38,17 +38,16 @@ root_path:  ../
 </section>
 
 <section class="attend__strip">
-     <a href="https://offlinecamp.typeform.com/to/q93H7U" class="attend">Apply</a>
-     <p>Apply now to be on the list for Super Early Bird tickets!</p>
+     <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend">Join a Future Camp</a>
+     <p>Offline Camp Oregon has ended, but we'd love to see you at our next event! Share your contact details and we'll let you know when the next camp location is announced.</p>
 </section>
 
-{% comment %}
 <section class="camp__sponsors">
   <div class="camp__wrapper foundational">
     <h4>Foundational Sponsor</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'foundational'  %}
+      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'foundational'  %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -64,7 +63,7 @@ root_path:  ../
     <h4>Room Sponsor</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'room' %}
+      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'room' %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -76,11 +75,12 @@ root_path:  ../
     </ul>
   </div>
 
+  {% comment %}
   <div class="camp__wrapper supporting">
     <h4>Supporting sponsors</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'supporting' %}
+      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'supporting' %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -91,8 +91,8 @@ root_path:  ../
       {% endfor %}
     </ul>
   </div>
+  {% endcomment %}
 </section>
-{% endcomment %}
 
 <section class="camp__support">
   <div class="camp__wrapper">
@@ -105,7 +105,7 @@ root_path:  ../
       <p>A huge thank you for the logistics and systems support from our event partners.</p>
       <ul>
         {% for post in site.posts %}
-        {% if post.type == 'support' and post.location == 'oregon19' %}
+        {% if post.type == 'support' and post.location == 'oregon' %}
         <li>
           <a href="{{ post.site }}">
             <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
@@ -120,8 +120,8 @@ root_path:  ../
 
 <footer>
   <section class="tickets">
-    <p>Apply now to be on the list for Super Early Bird tickets!</p>
-  <a href="https://offlinecamp.typeform.com/to/q93H7U" class="attend pink">Attend</a>
+    <p>Offline Camp Oregon has ended, but we'd love to see you at our next event! Share your contact details and we'll let you know when the next camp location is announced.</p>
+  <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a>
   </section>
 
   <div class="camp__wrapper">
