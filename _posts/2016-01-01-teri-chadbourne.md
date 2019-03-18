@@ -3,9 +3,10 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Teri Chadbourne
-location: oregon
+location: newyork2016, california2016, berlin2017, oregon2017, oregon2019
 twitter:  EventTeri
-avatar:   /images/team/teri.jpg
+avatar:   /images/team/teri2.jpg
+pronouns: she/her/hers
 ---
 
 ### What do you find interesting about the concept of Offline First?

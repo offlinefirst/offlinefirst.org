@@ -8,12 +8,14 @@ root_path:  ../
    <h1>The Offline Camp Team</h1>
     <ul class="profiles">
       {% for post in site.posts %}
-      {% if post.type == 'team' and post.location == 'oregon' %}
+      {% if post.type == 'team' and post.location contains 'oregon2019' %}
       <li>
         <a href="{{ post.url }}">
           <img src="{{ post.avatar }}" alt="" class="full_image">
         </a>
-        <h2>{{ post.name }}</h2> <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+        <h2>{{ post.name }}</h2>
+        <p>({{ post.pronouns }})</p>
+        <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
       </li>
       {% endif %}
       {% endfor %}

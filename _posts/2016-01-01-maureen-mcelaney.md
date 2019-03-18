@@ -1,7 +1,8 @@
 ---
 layout:   camper-profile
 root_path: ../../
-type:     
+type:
+location: newyork2016
 name:     Maureen McElaney
 twitter:  Mo_Mack
 avatar:   /images/team/maureen.jpg
@@ -9,7 +10,7 @@ avatar:   /images/team/maureen.jpg
 
 ### What do you find interesting about the concept of Offline First?
 
-I love that Offline First shifts the focus of thinking first about your most vulnerable users and how they experience the usability of your application. You provide them with a feeling that even though they can’t complete a transaction in that moment, you care about their experience. For me, as a user, that would keep me coming back! 
+I love that Offline First shifts the focus of thinking first about your most vulnerable users and how they experience the usability of your application. You provide them with a feeling that even though they can’t complete a transaction in that moment, you care about their experience. For me, as a user, that would keep me coming back!
 
 ### What motivated you to organise Offline Camp?
 
@@ -24,6 +25,4 @@ My hope is that each camper walks away from Offline Camp with a new perspective 
 
 ### Can you describe what Offline First means to you in a sentence?
 
-To me, Offline First means more than just getting to play with the Chrome Offline Dinosaur. It means, feeling like the applications I use care about ME and the data I NEED. And helping to make sure our users know that we accommodated for them and thought first about the worst case scenario: No Internets! Yikes!  
-  
-
+To me, Offline First means more than just getting to play with the Chrome Offline Dinosaur. It means, feeling like the applications I use care about ME and the data I NEED. And helping to make sure our users know that we accommodated for them and thought first about the worst case scenario: No Internets! Yikes!

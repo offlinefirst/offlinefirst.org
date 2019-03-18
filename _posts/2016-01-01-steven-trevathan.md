@@ -3,9 +3,10 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Steven Trevathan
-location: oregon
+location: newyork2016, california2016, berlin2017, oregon2017, oregon2019
 twitter:  strevat
 avatar:   /images/team/steve.jpg
+pronouns: he/him/his
 ---
 
 ### What do you find interesting about the concept of Offline First?

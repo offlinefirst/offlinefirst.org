@@ -2,10 +2,11 @@
 layout:   camper-profile
 root_path: ../../
 type:     team
-name:     Glynn Bird
-location: berlin2017
-twitter:  glynn_bird
-avatar:   /images/team/glynn.jpg
+name:     Carter Rabasa
+location: oregon2019
+twitter:  crtr0
+avatar:   /images/team/carter.jpg
+pronouns: he/him/his
 ---
 
 ### What do you find interesting about the concept of Offline First?
