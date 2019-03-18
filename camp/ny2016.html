@@ -133,7 +133,6 @@ root_path:  ../
    <h2>The Offline Camp Team</h2>
    <ul>
     {% for post in site.posts %}
-    {% if post.type == 'team' %}
     {% if post.type == 'team' and post.location contains 'newyork2016' %}
     <li>
       <a href="{{ post.url }}">
