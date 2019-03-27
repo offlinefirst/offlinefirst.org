@@ -1,9 +1,9 @@
 ---
 root_path: ../../
 type:     support
-name:     Protocal Labs
+name:     Protocol Labs
 location: oregon19
-class:    protocal
+class:    protocol
 site:     https://protocol.ai/
 logo:     /images/camp/protocol-labs.svg
 ---
