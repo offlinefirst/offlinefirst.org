@@ -82,8 +82,8 @@
     </section>
 
 
-    {% comment %}
     <section class="camp__sponsors">
+      {% comment %}
       <div class="camp__wrapper foundational">
         <h4>Foundational Sponsor</h4>
         <ul>
@@ -99,23 +99,23 @@
           {% endfor %}
         </ul>
       </div>
+      {% endcomment %}
 
       <div class="camp__wrapper room">
         <h4>Room Sponsor</h4>
         <ul>
-          {% for post in site.posts %}
-          {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'room' %}
+          {% for post in site.posts %}{% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'room' %}
           <li>
             <a href="{{ post.site }}">
               <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
             </a>
             {{post.content}}
           </li>
-          {% endif %}
-          {% endfor %}
+          {% endif %}{% endfor %}
         </ul>
       </div>
 
+      {% comment %}
       <div class="camp__wrapper supporting">
         <h4>Supporting sponsors</h4>
         <ul>
@@ -131,15 +131,15 @@
           {% endfor %}
         </ul>
       </div>
+      {% endcomment %}
     </section>
-    {% endcomment %}
 
     <section class="camp__support">
       <div class="camp__wrapper">
         <div class="camp__support__request">
           <p>Gathering the community for a focused conversation about Offline First is a tremendous way to advance offline tooling, design patterns, and visibility of these challenges in the tech community.</p>
           <p>We would love to have your help.</p>
-          <a href="{{ page.root_path }}camp/assets/offline-camp-oregon-prospectus.pdf" class="sponsor pink">Sponsor</a>
+          <a href="{{ page.root_path }}camp/assets/Prospectus-Oregon-2019.pdf" class="sponsor pink">Sponsor</a>
         </div>
         <div class="camp__supporter">
           <p>A huge thank you for the logistics and systems support from our event partners.</p>

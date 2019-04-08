@@ -1,6 +1,7 @@
 ---
 root_path: ../../
-type:     support
+type:     sponsor
+sponsor_type: room
 name:     Protocol Labs
 location: oregon19
 class:    protocol
