@@ -904,14 +904,14 @@ $linkBG: rgba(62,19,96,.05);
       ul.profiles {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: auto;
         max-width: 800px;
         padding-top: 24px;
 
         li {
+          width: 360px;
           margin-bottom: 36px;
-          width: 30%;
 
           img {
             width: 100%;
