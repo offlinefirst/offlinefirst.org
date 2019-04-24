@@ -3,7 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Lorna Mitchell
-location: berlin
+location: berlin2017
 twitter:  lornajane
 avatar:   /images/team/lorna.jpg
 ---

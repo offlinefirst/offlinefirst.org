@@ -69,6 +69,10 @@ $linkBG: rgba(62,19,96,.05);
     text-decoration: underline;
     color: $linkColor;
     background: $linkBG;
+
+    &.pink {
+      color: #FF99C6;
+    }
   }
 
   p {
@@ -636,6 +640,7 @@ $linkBG: rgba(62,19,96,.05);
       ul {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         li {
           padding: 0 5% 24px 0;
@@ -652,13 +657,16 @@ $linkBG: rgba(62,19,96,.05);
             background: transparent;
 
             img.support_logo {
-              padding: 30px 0 15px 0;
               width: 100%;
 
-              &.makemodel {
-
+              &.protocol {
+                position: relative;
+                width: 78%;
+                padding: 0;
               }
-
+              &.makemodel {
+                position: relative;
+              }
               &.hoodie {
                 position: relative;
               }
@@ -896,14 +904,14 @@ $linkBG: rgba(62,19,96,.05);
       ul.profiles {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: auto;
         max-width: 800px;
         padding-top: 24px;
 
         li {
+          width: 360px;
           margin-bottom: 36px;
-          width: 30%;
 
           img {
             width: 100%;

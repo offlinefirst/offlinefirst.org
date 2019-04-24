@@ -3,7 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Glynn Bird
-location: berlin
+location: berlin2017
 twitter:  glynn_bird
 avatar:   /images/team/glynn.jpg
 ---

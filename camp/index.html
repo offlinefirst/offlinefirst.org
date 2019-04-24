@@ -13,7 +13,7 @@ root_path:  ../
       <h2>
         We're gathering the Offline First community for a weekend of collaboration at a ranch in southern  <strong>Oregon.</strong>
       </h2>
-      <p>We’re developers interested in making our apps work without constant internet connection. We’re designers exploring UX patterns that maintain user understanding of system state. We are all working on problems that very few have explored before, and we know it will take a wide range of viewpoints to solve the big challenges ahead of us. </p>
+      <p>We’re developers interested in making our apps work without a constant internet connection. We’re designers exploring UX patterns that maintain user understanding of system state. We are all working on problems that very few have explored before, and we know it will take a wide range of viewpoints to solve the big challenges ahead of us. </p>
       <p>Offline Camp is an open, participatory event. Please bring your perspective on Offline First and be willing to share — and listen!</p>
     </div>
     <div class="clear"></div>
@@ -38,16 +38,18 @@ root_path:  ../
 </section>
 
 <section class="attend__strip">
-     <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend">Join a Future Camp</a>
-     <p>Offline Camp Oregon has ended, but we'd love to see you at our next event! Share your contact details and we'll let you know when the next camp location is announced.</p>
+    <span class="price">$350</span>
+     <a href="https://offlinecamp.typeform.com/to/q93H7U" class="attend">Apply</a>
+     <p>Apply by May 17 to receive the Super Early Bird rate of $350 (includes food and lodging). <br/><a href="{{ page.root_path }}camp/faq.html#scholarships" class="pink">Scholarships available.</a></p>
 </section>
 
 <section class="camp__sponsors">
+  {% comment %}
   <div class="camp__wrapper foundational">
     <h4>Foundational Sponsor</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'foundational'  %}
+      {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'foundational'  %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -58,20 +60,19 @@ root_path:  ../
       {% endfor %}
     </ul>
   </div>
+  {% endcomment %}
 
   <div class="camp__wrapper room">
     <h4>Room Sponsor</h4>
     <ul>
-      {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'room' %}
+      {% for post in site.posts %}{% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'room' %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
         </a>
         {{post.content}}
       </li>
-      {% endif %}
-      {% endfor %}
+      {% endif %}{% endfor %}
     </ul>
   </div>
 
@@ -80,7 +81,7 @@ root_path:  ../
     <h4>Supporting sponsors</h4>
     <ul>
       {% for post in site.posts %}
-      {% if post.type == 'sponsor' and post.location == 'oregon' and post.sponsor_type == 'supporting' %}
+      {% if post.type == 'sponsor' and post.location == 'oregon19' and post.sponsor_type == 'supporting' %}
       <li>
         <a href="{{ post.site }}">
           <img src="{{ post.logo }}" alt="" class="{{ post.class }} sponsor_logo">
@@ -94,18 +95,19 @@ root_path:  ../
   {% endcomment %}
 </section>
 
+
 <section class="camp__support">
   <div class="camp__wrapper">
     <div class="camp__support__request">
       <p>Gathering the community for a focused conversation about Offline First is a tremendous way to advance offline tooling, design patterns, and visibility of these challenges in the tech community.</p>
       <p>We would love to have your help.</p>
-      <a href="{{ page.root_path }}camp/assets/offline-camp-oregon-prospectus.pdf" class="sponsor pink">Sponsor</a>
+      <a href="{{ page.root_path }}camp/assets/Prospectus-Oregon-2019.pdf" class="sponsor pink">Sponsor</a>
     </div>
     <div class="camp__supporter">
       <p>A huge thank you for the logistics and systems support from our event partners.</p>
       <ul>
         {% for post in site.posts %}
-        {% if post.type == 'support' and post.location == 'oregon' %}
+        {% if post.type == 'support' and post.location == 'oregon19' %}
         <li>
           <a href="{{ post.site }}">
             <img src="{{ post.logo }}" alt="" class="{{ post.class }} support_logo">
@@ -120,8 +122,8 @@ root_path:  ../
 
 <footer>
   <section class="tickets">
-    <p>Offline Camp Oregon has ended, but we'd love to see you at our next event! Share your contact details and we'll let you know when the next camp location is announced.</p>
-  <a href="https://offlinecamp.typeform.com/to/V8aSWJ" class="attend pink">Join a Future Camp</a>
+    <p>Apply by May 17 to receive the Super Early Bird rate of $350 (includes food and lodging). <a href= "{{ page.root_path }}camp/faq.html#scholarships">Scholarships available.</a></p>
+  <a href="https://offlinecamp.typeform.com/to/q93H7U" class="attend pink">Apply</a>
   </section>
 
   <div class="camp__wrapper">
@@ -129,7 +131,7 @@ root_path:  ../
       <h4>Past Camps</h4>
       <a href="#">New York 2016</a>
     </section> -->
-
+{% comment %}
     <section class="newsletter">
       <h4>Sign up for Offline First news.</h4>
       <!-- TODO: include mailchimp form -->
@@ -140,7 +142,7 @@ root_path:  ../
         </form>
       </div>
     </section>
-
+{% endcomment %}
     <span class="credit">
       Designed by <a href="http://www.makemodel.co">Make&amp;Model</a>
     </span>

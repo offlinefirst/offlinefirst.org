@@ -3,7 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Gregor Martynus
-location: oregon
+location: newyork2016, california2016, berlin2017, oregon2017
 twitter:  gr2m
 website:  http://hood.ie
 bio:      Unsatisfied with the status quo. Community Manager at Hoodie.
@@ -28,7 +28,7 @@ commodity – a precondition for a more decentralized web.
 ### What motivated you to organize Offline Camp?
 
 We observe a growing interest in the topic. Lately the push of [Progressive Web Apps](#TBD-link)
-sparks the interest to an even wider audience. There have been many talks at  
+sparks the interest to an even wider audience. There have been many talks at
 meetups and conferences related to Offline First in the past—we thought it was
 about time to give it a dedicated space, to start a community movement around it.
 

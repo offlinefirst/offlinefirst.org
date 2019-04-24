@@ -8,7 +8,7 @@ root_path:  ../../
    <h1>The Offline Camp Team</h1>
     <ul class="profiles">
       {% for post in site.posts %}
-      {% if post.type == 'team' and post.location == 'berlin' %}
+      {% if post.type == 'team' and post.location contains'berlin2017' %}
       <li>
         <a href="{{ post.url }}">
           <img src="{{ post.avatar }}" alt="" class="full_image">

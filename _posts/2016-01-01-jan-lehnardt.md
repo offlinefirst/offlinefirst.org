@@ -3,7 +3,7 @@ layout:   camper-profile
 root_path: ../../
 type:     team
 name:     Jan Lehnardt
-location: berlin
+location: berlin2017
 twitter:  janl
 avatar:   /images/team/jan.jpg
 ---
