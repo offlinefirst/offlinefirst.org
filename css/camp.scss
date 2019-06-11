@@ -640,7 +640,7 @@ $linkBG: rgba(62,19,96,.05);
       ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: baseline;
 
         li {
           padding: 0 5% 24px 0;
@@ -666,9 +666,14 @@ $linkBG: rgba(62,19,96,.05);
               }
               &.makemodel {
                 position: relative;
+                width: 110%;
               }
               &.hoodie {
                 position: relative;
+              }
+
+              &.fizbuz {
+                width: 70%;
               }
 
               &.bocoup {
